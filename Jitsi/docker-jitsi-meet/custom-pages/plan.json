@@ -1,0 +1,81 @@
+{
+  "candidate": "Hardhik Reddy",
+  "role": "AI/ML Engineer",
+  "vocab": [
+    "LoRA",
+    "PyTorch",
+    "Whisper",
+    "CTC",
+    "WER",
+    "fine-tuning",
+    "transformer",
+    "ASR",
+    "Hugging Face",
+    "BM25"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "topic": "intro",
+      "q": "Could you briefly introduce yourself and the kind of AI work you have been doing?",
+      "expected": [
+        "current role",
+        "main areas of work",
+        "one concrete project"
+      ],
+      "max_followups": 1,
+      "context": "General opener"
+    },
+    {
+      "id": 2,
+      "topic": "project",
+      "q": "Tell me about a speech recognition model you fine-tuned. What data did you use, and how did you measure whether it improved?",
+      "expected": [
+        "dataset and size",
+        "preprocessing",
+        "metric such as WER",
+        "before and after numbers"
+      ],
+      "max_followups": 2,
+      "context": "Resume: fine-tuning Whisper for Indian-accented English speech recognition"
+    },
+    {
+      "id": 3,
+      "topic": "jd_skill",
+      "q": "What is LoRA, and why would you use it instead of full fine-tuning?",
+      "expected": [
+        "low-rank update matrices",
+        "frozen base weights",
+        "fewer trainable parameters",
+        "memory and cost savings"
+      ],
+      "max_followups": 2,
+      "context": "JD: fine-tuning LLMs with LoRA / PEFT"
+    },
+    {
+      "id": 4,
+      "topic": "fundamentals",
+      "q": "How is word error rate calculated?",
+      "expected": [
+        "substitutions, deletions, insertions",
+        "divided by number of reference words",
+        "can exceed 100 percent"
+      ],
+      "max_followups": 1,
+      "context": "JD: evaluating speech recognition models"
+    },
+    {
+      "id": 5,
+      "topic": "experience",
+      "q": "Describe a time a model did well offline but worse in production. What did you find, and what did you change?",
+      "expected": [
+        "specific situation",
+        "root cause",
+        "fix",
+        "result"
+      ],
+      "max_followups": 2,
+      "context": "JD: deploying ML models to production"
+    }
+  ]
+}

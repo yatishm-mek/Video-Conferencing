@@ -1,0 +1,20 @@
+# Offline speech-to-text engine for the Jigasi transcriber.
+#
+# The transcriber (transcriber.yml) connects to this over the shared
+# "meet.jitsi" network at ws://vosk:2700 (see JIGASI_TRANSCRIBER_VOSK_URL in .env).
+#
+# alphacep/kaldi-en bundles an English Vosk model and starts a websocket
+# ASR server on port 2700 automatically. Swap the image for another
+# language model if needed (see https://alphacephei.com/vosk/models).
+services:
+    vosk:
+        image: alphacep/kaldi-en:latest
+        restart: ${RESTART_POLICY:-unless-stopped}
+        # Expose 2700 on the host only if you want to test the ASR server
+        # directly; the transcriber reaches it over the internal network.
+        # ports:
+        #     - "2700:2700"
+        networks:
+            meet.jitsi:
+                aliases:
+                    - vosk

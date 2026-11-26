@@ -1,0 +1,503 @@
+# Reading script for fine-tuning the voice (Qwen3-TTS 1.7B).
+# General, everyday speech: conversation, stories, explanations, questions, numbers,
+# names, emotions and longer reading-style sentences, so the voice works for anything.
+# Lines starting with # are notes and are not read.
+#
+# How to record:
+#  - Quiet room, same microphone, same distance (about a hand's width from your mouth).
+#  - Speak in your normal, natural voice, as if talking to a person, not reading.
+#  - Pause about one second after every sentence.
+#  - Made a mistake? Just pause, and read the whole sentence again. Bad pieces are dropped.
+#  - One session = one recording file (about 5 minutes). Take a break between sessions,
+#    drink water. Record a session again whenever it doesn't feel right.
+#  - Save the files in data\voice_dataset\recordings (any name, .wav or .m4a).
+
+# ---------- Session 1: everyday conversation ----------
+Hi, how have you been?
+It's good to see you again after such a long time.
+I'm doing well, thanks for asking.
+What have you been up to lately?
+Not much, just the usual work and a bit of rest.
+Do you want to grab a coffee later?
+Sure, I'm free after four o'clock.
+Let me know when you reach, and I'll come downstairs.
+Sorry I'm late, the traffic was crazy today.
+No problem, I only just got here myself.
+Have you eaten anything yet?
+I could really use something warm right now.
+That sounds like a great plan to me.
+I'll pick you up on the way, if that's easier.
+Could you pass me the salt, please?
+Thanks, that's really kind of you.
+Don't mention it, happy to help.
+I think I left my keys on the table.
+Can you check if the door is locked?
+Let's watch something light tonight, maybe a comedy.
+I've heard good things about that new series.
+Honestly, I'm too tired to cook today.
+Shall we just order something instead?
+Whatever you like, I'm not very hungry.
+I'll be back in a few minutes, don't go anywhere.
+Wait for me near the gate.
+It's getting late, I should probably head home.
+Message me when you get there safely.
+Good night, and sleep well.
+Good morning! Did you sleep well?
+I slept like a baby, to be honest.
+Let's not make any big plans for the weekend.
+I just want to relax and read a book.
+That's fair, you've had a busy week.
+Are you coming to the party on Saturday?
+I'm not sure yet, I'll tell you by tomorrow.
+My cousin is visiting us next week.
+We haven't met in almost two years.
+It's funny how quickly time goes by.
+I really missed these little chats with you.
+Call me whenever you're free, okay?
+Of course, take care of yourself.
+See you soon, and say hello to everyone at home.
+Bye for now.
+
+# ---------- Session 2: home and daily life ----------
+I usually wake up around six in the morning.
+The first thing I do is open the windows.
+A cup of hot tea helps me start the day.
+I try to go for a short walk before breakfast.
+The milkman comes early, even on Sundays.
+My mother makes the best breakfast in the world.
+We always eat dinner together as a family.
+The washing machine stopped working again.
+I need to buy groceries on the way back home.
+We're out of rice, sugar and cooking oil.
+The vegetables at the local market are always fresh.
+I like to keep my room clean and simple.
+The fan makes a strange noise when it's on full speed.
+Please water the plants while I'm away.
+The neighbour's cat sleeps on our balcony every afternoon.
+The power went off for about an hour last night.
+Thankfully, the phone still had some battery left.
+My little sister is preparing for her exams.
+She studies late into the night with a small lamp.
+On Sundays, we clean the whole house together.
+The kitchen smells wonderful when bread is baking.
+I always forget where I put my glasses.
+The wall clock is running five minutes slow.
+We painted the living room a soft shade of blue.
+The new curtains make the room look brighter.
+There's a small temple at the end of our street.
+The street lights come on just after sunset.
+I like listening to the radio while I wash the dishes.
+The children next door practise music every evening.
+Our old television still works perfectly.
+Grandfather reads the newspaper from the first page to the last.
+He folds it neatly when he's finished.
+We keep a jar of biscuits for guests.
+The guests arrived earlier than we expected.
+The doorbell rang three times before anyone answered.
+Let me fill this bottle with water before we leave.
+Remember to carry an umbrella, it might rain.
+My shoes got completely wet in the puddle.
+I'll iron my shirt tonight to save time tomorrow.
+The bus to the city leaves every twenty minutes.
+I prefer the window seat on long journeys.
+The road near our house is finally being repaired.
+It feels peaceful when everyone is asleep.
+Home is the one place where I can truly relax.
+
+# ---------- Session 3: short stories ----------
+Once upon a time, there was a small village near a river.
+The villagers grew rice and vegetables on the green fields.
+Every morning, an old man sat under the big banyan tree.
+He told stories to the children who passed by.
+One day, a young girl asked him why the river never stopped flowing.
+The old man smiled and said, because it always has somewhere to go.
+The girl thought about his words for a long time.
+Years later, she became a teacher in the same village.
+Last summer, we took a train to the mountains.
+The journey took almost the whole night.
+In the morning, we woke up to a view of the clouds below us.
+The air was cold, fresh and very clean.
+We walked through the tea gardens for hours.
+A friendly guide showed us an old wooden bridge.
+On the way back, we stopped for hot pakoras and tea.
+It was one of the best trips of my life.
+When I was a child, I was afraid of the dark.
+My father would leave a small light on in the corridor.
+Slowly, I learned that there was nothing to fear.
+Now, I actually enjoy quiet, dark nights.
+I still remember my first day at school.
+I held my mother's hand and refused to let go.
+A kind teacher gave me a colourful pencil.
+By the end of the day, I didn't want to go home.
+A lost puppy followed me home one rainy evening.
+It was shivering and very hungry.
+We gave it some warm milk and an old blanket.
+The next morning, it was wagging its tail happily.
+We named it Lucky, and it stayed with us for twelve years.
+My friend once tried to cook dinner for twenty people.
+Everything went wrong, from the rice to the dessert.
+But everyone laughed and enjoyed the evening anyway.
+It was the most memorable dinner we ever had.
+The old library had books from floor to ceiling.
+I spent every holiday reading in the corner by the window.
+The librarian knew exactly which book I would like next.
+One day, she gave me a book that changed the way I think.
+I still have a copy of it on my shelf.
+The festival lights filled the whole street with colour.
+Children ran around with sparklers in their hands.
+The smell of sweets came from every house.
+Late at night, the fireworks lit up the sky.
+We sat on the terrace and watched until the very end.
+And that's how a simple evening became a beautiful memory.
+
+# ---------- Session 4: explaining how things work ----------
+Plants make their own food using sunlight, water and air.
+The moon doesn't make its own light, it reflects the sun.
+Rain forms when tiny drops of water in the clouds join together.
+A rainbow appears when sunlight passes through raindrops.
+Bees help flowers grow by carrying pollen from one to another.
+The heart pumps blood through the body all day and night.
+Drinking enough water keeps your body healthy and active.
+Regular sleep helps the brain remember what we learn.
+Exercise doesn't have to be hard, even walking makes a difference.
+To make a good cup of tea, first boil the water properly.
+Then add the tea leaves, and let it brew for a few minutes.
+Add milk and sugar to taste, and strain it into a cup.
+If you're planting seeds, keep the soil damp but not wet.
+Most seeds need a few days of warmth before they sprout.
+A bicycle stays balanced because the wheels keep moving forward.
+Brakes work by pressing against the wheel to slow it down.
+An electric fan turns electricity into movement.
+A refrigerator keeps food cold by moving heat outside.
+The internet connects millions of computers around the world.
+When you send a message, it travels as tiny pieces of data.
+A map helps you understand where you are and where to go.
+North is usually shown at the top of most maps.
+Saving a little money every month adds up over time.
+It's a good idea to keep a small amount aside for emergencies.
+Learning a new language is easier with daily practice.
+Even ten minutes a day can make a big difference.
+To remember things better, try explaining them to someone else.
+Writing notes by hand can also help you understand a topic.
+Sound travels faster through water than through air.
+Light is so fast that it can go around the earth in less than a second.
+Volcanoes form where hot rock from deep inside the earth rises up.
+Earthquakes happen when large pieces of the ground suddenly move.
+The ocean covers most of the surface of our planet.
+Some birds fly thousands of kilometres every year to find warmer places.
+Elephants can recognise their friends even after many years.
+Trees can live for hundreds, sometimes thousands, of years.
+Recycling paper saves trees, water and energy.
+Switching off lights you don't need helps save electricity.
+A balanced meal includes grains, vegetables, fruit and protein.
+Washing your hands often is one of the best ways to stay healthy.
+Stretching in the morning can help you feel less stiff.
+Good posture protects your back when you sit for long hours.
+Clear instructions make any task much easier to finish.
+The simplest explanation is often the easiest to remember.
+
+# ---------- Session 5: questions and answers ----------
+Where did you buy that beautiful lamp?
+How long does it take to get to the airport from here?
+Which one do you prefer, the red one or the blue one?
+Why is the shop closed today?
+What time does the movie start?
+Have you ever been to the seaside?
+Is it going to rain this afternoon?
+Do you know anyone who can fix a broken phone screen?
+Could you help me carry these bags upstairs?
+Would you like some more tea?
+What's your favourite season of the year?
+I love the monsoon, because everything turns green.
+Who was your favourite teacher at school?
+How do you make your coffee so tasty?
+The secret is fresh beans and a little patience.
+When are you planning to visit your hometown?
+Probably next month, during the long weekend.
+Can I borrow your charger for a few minutes?
+Of course, it's in the top drawer.
+Did you remember to bring the tickets?
+Yes, they're right here in my bag.
+What would you do if you won a big prize?
+I think I'd travel around the world first.
+Have you finished reading that book I gave you?
+Almost, I only have two chapters left.
+Is this seat taken?
+No, please go ahead and sit down.
+How was your day at work?
+It was long, but quite productive.
+What's the best way to learn to swim?
+Start slowly, and practise with someone you trust.
+Are you sure this is the right address?
+Let me check the map again, just to be safe.
+Why do cats like sleeping in boxes so much?
+Nobody really knows, but they seem very comfortable.
+How many languages can you speak?
+I speak three, and I'm learning a fourth.
+Isn't it amazing how much the city has changed?
+What did you think of the food at the wedding?
+It was delicious, especially the sweets.
+Shall we take the stairs or the lift?
+Let's take the stairs, it's good exercise.
+Do you really think it's a good idea?
+Yes, I do, but let's think it through together.
+
+# ---------- Session 6: numbers, dates, names and places ----------
+The train leaves at half past seven in the morning.
+Please wait for another fifteen minutes.
+The shop is open from nine to six, Monday to Saturday.
+My birthday is on the twenty-third of August.
+We moved into this house in the year two thousand and eighteen.
+There are thirty-one days in the month of July.
+The temperature dropped to eighteen degrees last night.
+The book has four hundred and twenty pages.
+She ran five kilometres in just under thirty minutes.
+The tickets cost three hundred and fifty rupees each.
+Our flat is on the seventh floor.
+The bus number is one hundred and twenty-two.
+I need two kilograms of onions and one kilogram of tomatoes.
+The meeting is on Wednesday, the eleventh of June.
+The concert lasted almost three hours.
+Only twelve people turned up because of the rain.
+He scored ninety-two out of a hundred in maths.
+The bridge is about two kilometres long.
+It's been nearly six months since we last met.
+The recipe needs three eggs, one cup of flour and a pinch of salt.
+My phone number starts with nine, eight, four.
+The festival is celebrated in October or November every year.
+The baby is eight months old and already trying to walk.
+We waited in the queue for forty-five minutes.
+The last train back is at eleven fifteen.
+Priya and Arjun are getting married in December.
+Rahul plays the violin, and Kavya plays the flute.
+My uncle Suresh runs a small bakery in Mysuru.
+Sneha just moved from Chennai to Hyderabad.
+Ananya, Vikram and Meera are coming over for lunch.
+We spent a week in Goa and two days in Mumbai.
+The river flows all the way from the hills to the sea.
+Bengaluru is known for its pleasant weather.
+Jaipur is often called the pink city.
+Kerala is famous for its backwaters and coconut trees.
+Delhi gets very hot in May and quite cold in January.
+We drove from Pune to Kolhapur in about five hours.
+The Himalayas have some of the highest mountains in the world.
+Our flight to Kolkata was delayed by an hour.
+I've always wanted to visit Varanasi and see the ghats.
+The museum opens at ten and closes at five thirty.
+Today is Friday, and tomorrow is a holiday.
+It's exactly a quarter to three right now.
+Saturday the fourteenth works perfectly for me.
+
+# ---------- Session 7: feelings and different moods ----------
+Wow, that's wonderful news, congratulations!
+I'm so proud of you, you really deserve this.
+Oh no, I'm sorry to hear that.
+That must have been really hard for you.
+Honestly, I can't stop smiling today!
+Ugh, I spilled coffee all over my shirt.
+Hmm, let me think about that for a moment.
+Well, I suppose we could try it your way.
+Shh, the baby has just fallen asleep.
+Hurry up, or we'll miss the bus!
+Relax, there's no need to worry.
+Yay, the results are finally out, and I passed!
+Oh, you scared me, I didn't hear you come in.
+I'm really not in the mood to go out tonight.
+Come on, it'll be fun, I promise.
+I can't believe it's already been a whole year.
+That joke was so silly, but I couldn't stop laughing.
+Please be careful, the floor is still wet.
+I'm a little nervous, to be honest.
+Don't be scared, you'll be absolutely fine.
+That was the most beautiful sunset I've ever seen.
+Really? You've never tried mangoes with chilli powder?
+Oh, I completely forgot, thank you for reminding me.
+Ah, now it all makes sense.
+Seriously, this is the best food I've had all week!
+I'm sorry, I didn't mean to upset you.
+It's okay, these things happen to everyone.
+I feel so calm when I sit by the sea.
+Hey, look who's here!
+Brilliant, that's exactly what I was hoping for.
+Wait, wait, I think I know the answer!
+Oh dear, it looks like we're lost again.
+I miss those simple days so much.
+Thank you, that really means the world to me.
+Hmm, I'm not sure that's such a good idea.
+Listen carefully, this is the important part.
+Finally, after all that waiting, it's here!
+Oh well, maybe next time.
+I'm absolutely exhausted, but it was worth it.
+Goodness, look at the time!
+Cheer up, tomorrow is a new day.
+That's so thoughtful of you, thank you.
+Quietly now, let's not wake anyone up.
+Oh, how lovely, you remembered!
+
+# ---------- Session 8: longer, reading-style sentences ----------
+The city was quiet in the early hours, with only the sound of birds and the occasional passing scooter.
+As the sun rose over the hills, the mist slowly lifted from the valley below.
+Farmers across the region are hoping for good rainfall this season.
+The new park, which opened last week, has already become a favourite spot for families.
+Scientists have discovered a new species of frog in the forests of the Western Ghats.
+Local volunteers spent the whole weekend cleaning the beach and planting trees.
+The old railway station has been carefully restored to look exactly as it did a century ago.
+After months of preparation, the school finally held its annual science fair.
+Visitors from all over the country came to see the colourful flower show.
+The museum's new exhibition tells the story of ancient trade routes across the ocean.
+Reading every day, even for a few minutes, can open doors to entirely new worlds.
+Good friends are the ones who stay with you through both the good times and the bad.
+Patience is not about waiting, but about how we behave while we wait.
+The best way to predict the future is to work towards it every single day.
+Small acts of kindness can brighten someone's entire day.
+In the middle of the busy market, an old woman sold fresh jasmine flowers.
+Her small basket filled the air with a sweet and gentle fragrance.
+The river sparkled under the moonlight as the boat drifted slowly downstream.
+On rainy evenings, the whole family would gather around and share stories.
+The mountain path was narrow and steep, but the view at the top was breathtaking.
+Every great journey begins with a single, simple step.
+The orchestra played so beautifully that the audience stood up and clapped for minutes.
+Technology has changed the way we work, learn and stay in touch with each other.
+Even so, nothing replaces a real conversation with someone you care about.
+The bakery on the corner opens before dawn, and the smell of fresh bread fills the street.
+Children laughed and splashed in the puddles after the first rain of the season.
+The festival brought together people of every age, language and background.
+A gentle breeze moved through the coconut trees along the shore.
+The lighthouse has guided ships safely to the harbour for more than a hundred years.
+She opened the old letter carefully, and her eyes filled with happy tears.
+The train slowly pulled out of the station as people waved goodbye.
+Learning from our mistakes is one of the most valuable lessons in life.
+The night sky was so clear that we could count hundreds of stars.
+A good book can make you laugh, cry and think, all on the same page.
+The streets were decorated with lamps, flowers and bright paper lanterns.
+Health is the greatest wealth, and it's worth taking care of every day.
+The garden was full of butterflies, buzzing bees and bright yellow sunflowers.
+He practised the piano for hours, until every note sounded just right.
+The city skyline glowed in shades of orange and gold at dusk.
+Sometimes the quietest people have the most interesting stories to tell.
+Kindness costs nothing, but it can mean everything to someone.
+With a little effort and a lot of patience, almost anything is possible.
+And as the evening came to an end, everyone agreed it had been a perfect day.
+
+# ---------- Session 9: food, travel, shopping and hobbies ----------
+I could eat hot idlis with coconut chutney every single morning.
+The trick to soft chapatis is to knead the dough really well.
+Add a little ginger and garlic, and the whole dish comes alive.
+This curry is a bit too spicy for me, could I have some curd?
+Fresh lime juice with a pinch of salt is perfect on a hot day.
+My grandmother never measured anything, she cooked by feel.
+Let the rice rest for five minutes after it's cooked.
+Biryani always tastes better when it's shared with friends.
+I'm trying to eat more fruit and fewer sweets these days.
+The street food here is cheap, quick and absolutely delicious.
+We ordered far too much food, so we packed the rest for later.
+Could we get the bill, please?
+Is there a good vegetarian restaurant nearby?
+Turn left at the second signal, and you'll see it on your right.
+Keep going straight until you reach the big bookshop.
+The station is a ten minute walk from here.
+If you get lost, just ask anyone for the clock tower.
+We missed our stop and had to walk all the way back.
+I always pack a book and a small snack for long journeys.
+The hotel room was small, but it had a lovely view of the sea.
+We hired a scooter and explored the little villages along the coast.
+Our guide spoke four languages and knew every corner of the old town.
+The waterfall was even more beautiful than in the photographs.
+I like travelling by train, because you see so much of the country.
+Don't forget your charger, your ticket and your water bottle.
+The airport was crowded, but the flight left right on time.
+We bought a few handmade gifts from the local market.
+The shopkeeper gave us a small discount because we bought so much.
+Do you have this shirt in a larger size?
+I think the blue one suits you better than the grey one.
+These shoes are comfortable, but they're a little expensive.
+Let's compare the prices online before we decide.
+I only came in for bread, and I left with a full bag.
+The mall gets very busy on weekends and holidays.
+Can I pay by card, or is it cash only?
+Please keep the receipt, in case we need to return it.
+In my free time, I enjoy painting with watercolours.
+My brother has been collecting old coins since he was ten.
+We play badminton in the park every Sunday morning.
+Gardening teaches you patience better than anything else.
+I started running last year, and now I can't imagine stopping.
+She learned to bake from online videos during the holidays.
+Photography makes you notice the small details around you.
+Chess looks simple, but every game is completely different.
+I love the sound of rain while I'm playing the guitar.
+We joined a small book club that meets once a month.
+Cycling to work saves money and keeps me fit.
+Learning to swim as an adult was scary, but so rewarding.
+My friends and I go trekking whenever we get a long weekend.
+Cricket matches always bring the whole neighbourhood together.
+He spends hours fixing old radios and clocks.
+Writing in a diary every night helps me clear my mind.
+Dancing is my favourite way to shake off a stressful day.
+I've been trying to grow tomatoes on the balcony.
+The puzzle had a thousand pieces, and we finished it in two days.
+We watched the football final with the whole family.
+Knitting is surprisingly relaxing once you get the hang of it.
+I enjoy long drives with good music and good company.
+The museum had a special section on old musical instruments.
+Every hobby starts with being a beginner, and that's perfectly fine.
+
+# ---------- Session 10: opinions, advice and descriptions ----------
+In my opinion, the simplest ideas are often the best ones.
+I think everyone should learn at least one practical skill.
+To be fair, both sides have a point.
+I used to think differently, but I've changed my mind.
+That's an interesting way to see it, I hadn't thought of that.
+Personally, I prefer mornings, because the day feels fresh.
+I'm not completely convinced, but I'm willing to give it a try.
+If I were you, I'd take a short break and come back to it later.
+Try not to compare yourself with others, everyone has their own pace.
+It's better to ask a question than to stay confused.
+Start small, stay consistent, and the results will follow.
+Don't wait for the perfect moment, it rarely comes.
+Take care of your health first, everything else comes after.
+Always read the instructions before you start assembling anything.
+Keep a spare key with someone you trust.
+Write things down, so you don't have to remember everything.
+Save your work often, especially when the power keeps going off.
+Turn off notifications when you need to focus.
+A short walk can solve a problem faster than staring at it.
+Be kind to people, even when they're having a bad day.
+The room was bright and airy, with tall windows on every side.
+Her voice was soft, calm and very reassuring.
+The old house had creaky wooden floors and a beautiful garden.
+The market was loud, crowded and full of colour.
+The coffee was strong, bitter and exactly what I needed.
+The road curved gently through green fields and small farms.
+His handwriting was so neat it almost looked printed.
+The lake was perfectly still, like a giant mirror.
+The cake was soft and moist, with a hint of cardamom.
+It was the kind of evening that makes you want to stay outside.
+My phone has been running slowly since the last update.
+Restarting it usually fixes most small problems.
+I keep all my photos backed up, just in case.
+Please don't share your password with anyone, not even friends.
+Video calls have made it so much easier to stay in touch.
+I set a reminder, so I wouldn't forget the appointment.
+The battery lasts all day if you lower the screen brightness.
+Online maps have completely changed the way we travel.
+Sometimes it's nice to put the phone away and just talk.
+Smart speakers can play music, set alarms and answer simple questions.
+She sells seashells by the seashore every summer.
+Peter quickly packed purple pens into the paper bag.
+The big black bug bit the big black bear.
+Thin threads of silver light shone through the thick clouds.
+Fresh fried fish is a favourite in the coastal towns.
+A proper cup of coffee from a copper pot is hard to beat.
+Six slim swans swam swiftly across the shining lake.
+Red lorry, yellow lorry, rolling down the road.
+Vivid violets and velvet roses filled the vase.
+Which witch wished for the wicked wristwatch?
+Whether it's sunny or cloudy, we'll go for a walk.
+The thirty-three thieves thought they thrilled the throne.
+Truly, rural roads are rarely really ruined.
+Brave birds bravely build big nests in the branches.
+Change is never easy, but it's often worth it.
+The more you practise, the more natural it feels.
+Every voice is unique, and that's what makes it special.
+Thank you for reading all of these sentences so patiently.
+That's the end of the script, thank you.

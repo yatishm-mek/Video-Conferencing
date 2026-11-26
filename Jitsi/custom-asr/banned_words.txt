@@ -1,0 +1,99 @@
+# Guardrail blocklist - words/phrases that must NOT appear in the transcript.
+# One entry per line. '#' starts a comment. Blank lines are ignored.
+# Matching is WHOLE-WORD and case-insensitive; multi-word phrases are allowed.
+# The ASR rarely emits punctuation, so obfuscated spellings (f*ck, sh1t) are
+# uncommon here, but you can add specific variants if you ever see them.
+#
+# Edit freely: add company-specific or role-specific terms at the bottom.
+
+# ---------------------------------------------------------------------------
+# Profanity / swearing
+# ---------------------------------------------------------------------------
+fuck
+fucking
+fucker
+motherfucker
+shit
+bullshit
+bitch
+bastard
+asshole
+dumbass
+jackass
+douchebag
+dick
+dickhead
+prick
+piss
+pissing
+pissed
+crap
+damn
+goddamn
+hell no
+bloody hell
+bugger
+wanker
+twat
+son of a bitch
+whore
+fatass
+
+# ---------------------------------------------------------------------------
+# Sexual / adult content
+# ---------------------------------------------------------------------------
+sex
+sexy
+sexual
+ass
+porn
+porno
+pornography
+nude
+nudes
+naked
+boobs
+tits
+penis
+vagina
+horny
+orgasm
+masturbate
+masturbation
+blowjob
+handjob
+cum
+dildo
+condom
+erotic
+hentai
+onlyfans
+Only fans
+xxx
+nsfw
+suck my
+
+# ---------------------------------------------------------------------------
+# Slurs / hate speech
+#   Keep this list to actual slurs you want filtered. Matching is whole-word,
+#   so common words are safe. Add terms specific to your policy.
+# ---------------------------------------------------------------------------
+nigger
+nigga
+faggot
+retard
+retarded
+spastic
+tranny
+
+# ---------------------------------------------------------------------------
+# Violence / self-harm (optional - uncomment if you want these filtered)
+# ---------------------------------------------------------------------------
+# kill yourself
+# suicide
+
+# ---------------------------------------------------------------------------
+# Company / project specific (add your own confidential terms here)
+# ---------------------------------------------------------------------------
+# internal codename zeus
+# confidential project x

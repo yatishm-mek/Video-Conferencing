@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EZY-Hire Interview</title>
+<link rel="preconnect" href="https://192.168.7.174:8443" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0d12; --surface:#15181f; --surface-2:#1b1f27; --ink:#eef0f5; --ink-2:#b6bdca;
+    --muted:#848c9c; --line:#262b35; --accent:#8279ff; --accent-2:#a79bff;
+    --ok:#34d399; --rec:#ef5350; --cand:#6ea8ff; --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:
+      radial-gradient(1100px 500px at 15% -10%, #1a1740 0%, transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, #13233f 0%, transparent 55%), var(--bg);
+    color:var(--ink);font-family:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    letter-spacing:-.011em;-webkit-font-smoothing:antialiased;overflow:hidden}
+
+  /* top bar */
+  .topbar{height:56px;display:flex;align-items:center;gap:13px;padding:0 18px;
+    border-bottom:1px solid var(--line);position:relative;z-index:2;
+    background:color-mix(in srgb,var(--surface) 70%, transparent);backdrop-filter:blur(10px)}
+  .logo{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;color:#fff;font-weight:800;
+    font-size:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+  .brand b{font-size:14px;font-weight:700}
+  .brand span{display:block;font-size:11.5px;color:var(--muted)}
+  .role-chip{font-size:11px;font-weight:700;padding:4px 11px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
+  .role-chip.recruiter{color:var(--accent);background:#201d40}
+  .role-chip.candidate{color:var(--cand);background:#152338}
+  .rec-pill{margin-left:auto;display:none;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--rec)}
+  .rec-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--rec);animation:beat 1.4s infinite}
+  @keyframes beat{0%,100%{opacity:1}50%{opacity:.3}}
+  .status{margin-left:auto;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:7px}
+  .status .d{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+  .status.live .d{background:var(--ok)}
+
+  /* stage: big video card + side nav */
+  .stage{position:absolute;top:56px;left:0;right:0;bottom:0;display:flex;gap:16px;padding:16px}
+  .videocard{flex:1;min-width:0;border-radius:var(--radius);overflow:hidden;background:#000;
+    border:1px solid var(--line);box-shadow:0 20px 60px -24px rgba(0,0,0,.8);position:relative}
+  #jitsi,#jitsi iframe{width:100%;height:100%;border:0;display:block}
+  .videocard .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);
+    font-size:14px;text-align:center;padding:24px}
+  .videocard .ph a{color:var(--accent-2)}
+
+  .side{width:340px;flex:none;display:flex;flex-direction:column;gap:16px;min-height:0}
+  @media (max-width:860px){ .side{width:290px} }
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.35)}
+  .card.grow{flex:1;min-height:0;display:flex;flex-direction:column}
+
+  /* details card */
+  .who{display:flex;align-items:center;gap:12px;padding:16px 16px 14px}
+  .avatar{width:46px;height:46px;border-radius:13px;flex:none;display:grid;place-items:center;color:#fff;
+    font-weight:800;font-size:17px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+  .who .n{font-size:15px;font-weight:700}
+  .who .r{font-size:12px;color:var(--muted)}
+  .meta{border-top:1px solid var(--line);padding:12px 16px;display:grid;gap:9px}
+  .meta .row{display:flex;justify-content:space-between;gap:12px;font-size:12.5px}
+  .meta .k{color:var(--muted)}
+  .meta .v{font-weight:600;text-align:right;word-break:break-all}
+  .tips{border-top:1px solid var(--line);padding:12px 16px}
+  .tips .h{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+  .tips .t{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--ink-2);margin-bottom:7px}
+  .tips .t b{color:var(--accent-2)}
+
+  /* recruiter panel */
+  .tabs{display:flex;border-bottom:1px solid var(--line)}
+  .tab{flex:1;text-align:center;padding:12px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}
+  .tab.on{color:var(--ink);border-bottom-color:var(--accent)}
+  .view{flex:1;min-height:0;overflow:auto;padding:12px 14px;display:none}
+  .view.on{display:block}
+  .line{padding:8px 10px;border-radius:9px;margin-bottom:6px;background:var(--surface-2);font-size:13px;line-height:1.5}
+  .line .sp{font-size:11px;font-weight:700;color:var(--accent-2);display:block;margin-bottom:1px}
+  .empty{color:var(--muted);font-size:13px;text-align:center;margin-top:26px}
+  .q{padding:11px 12px;border-radius:11px;margin-bottom:9px;background:var(--surface-2);border:1px solid var(--line)}
+  .q .num{font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.04em}
+  .q .qt{font-size:13.5px;font-weight:500;margin:4px 0 6px}
+  .q .exp{display:flex;flex-wrap:wrap;gap:5px}
+  .q .exp span{font-size:10.5px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);padding:2px 7px;border-radius:999px}
+  .qhead{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px}
+  /* live scoring */
+  .q.cur{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 25%,transparent)}
+  .qctl{display:flex;align-items:center;gap:8px;margin-top:9px;flex-wrap:wrap}
+  .btn.mini{font-size:11.5px;padding:5px 10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;cursor:pointer;font-family:inherit}
+  .btn.mini:hover{background:var(--surface-2)}
+  .btn.mini.primary{background:var(--accent);color:#fff;border-color:transparent}
+  .listening{font-size:11px;color:var(--ok);font-weight:600}
+  .qres{margin-top:8px}
+  .scorebar{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+  .scorebadge{font-size:12px;font-weight:800;padding:3px 9px;border-radius:8px;background:var(--surface);border:1px solid var(--line)}
+  .scorebadge.good{color:var(--ok);background:var(--ok-soft)}
+  .scorebadge.mid{color:var(--warn);background:var(--warn-soft)}
+  .scorebadge.low{color:var(--rec);background:#2a1414}
+  .verdict{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+  .qnotes{font-size:12px;color:var(--ink-2);line-height:1.5}
+  .followup{font-size:12px;color:var(--accent-2);margin-top:5px;padding:7px 9px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+  .followup b{color:var(--ink);font-weight:600}
+  .scoresum{font-size:12px;color:var(--ink-2);background:var(--surface-2);border:1px solid var(--line);border-radius:9px;padding:8px 11px;margin-bottom:10px;display:none}
+  .scoresum b{color:var(--ink)}
+</style>
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">EZ</div>
+    <div class="brand"><b>EZY-Hire Interview</b><span id="roomLabel"></span></div>
+    <span class="role-chip" id="roleChip">—</span>
+    <div class="status" id="status"><span class="d"></span><span id="statusTxt">Connecting…</span></div>
+    <span class="rec-pill" id="recPill"><span class="dot"></span>Recording</span>
+  </div>
+
+  <div class="stage">
+    <div class="videocard">
+      <div id="jitsi"></div>
+      <div class="ph" id="ph">Loading video…</div>
+    </div>
+
+    <div class="side">
+      <!-- details card (recruiter only) -->
+      <div class="card" id="detailsCard">
+        <div class="who">
+          <div class="avatar" id="av">—</div>
+          <div><div class="n" id="nm">—</div><div class="r" id="rl">—</div></div>
+        </div>
+        <div class="meta">
+          <div class="row"><span class="k">Position</span><span class="v" id="mRole">—</span></div>
+          <div class="row"><span class="k">Room</span><span class="v" id="mRoom">—</span></div>
+          <div class="row" id="mTypeRow"><span class="k">You are</span><span class="v" id="mType">—</span></div>
+          <div class="row" id="mProfRow"><span class="k">Profile</span><span class="v" id="mProf">—</span></div>
+        </div>
+        <div class="tips" id="tips"></div>
+      </div>
+
+      <!-- panel: recruiter = Transcript + Next questions; candidate = Interview questions only -->
+      <div class="card grow" id="panel" style="display:none">
+        <div class="tabs" id="tabsBar">
+          <div class="tab on" data-view="transcript">Transcript</div>
+          <div class="tab" data-view="questions">Next questions</div>
+        </div>
+        <div class="view on" id="view-transcript"><div class="empty" id="trEmpty">Waiting for speech…</div><div id="trList"></div></div>
+        <div class="view" id="view-questions"><div class="qhead" id="qHead" style="display:none">Interview questions</div><div class="scoresum" id="scoreSum"></div><div id="qList"></div></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+  const P = Object.fromEntries(new URLSearchParams(location.search));
+  // The room comes from ?room=... (the page itself is interview.html). Fall back to
+  // the path's last segment with any .html stripped, so the Jitsi room is never
+  // "interview.html".
+  const ROOM = P.room
+    || decodeURIComponent((location.pathname.split("/").filter(Boolean).pop() || "room").replace(/\.html?$/i, ""));
+  const TYPE = (P.type === "recruiter") ? "recruiter" : "candidate";
+  const USER = (P.userId || (TYPE==="recruiter" ? "Recruiter" : "Candidate"));
+  const NAME = USER.replace(/_/g," ");
+  const WANT_REC = P.ezyrec === "1" || P.rec === "1";
+  const isRecruiter = TYPE === "recruiter";
+
+  const initials = NAME.trim().split(/\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase() || "?";
+  $("#av").textContent = initials;
+  $("#nm").textContent = NAME;
+  $("#rl").textContent = isRecruiter ? "Interviewer" : "Candidate";
+  $("#roomLabel").textContent = ROOM;
+  $("#mRoom").textContent = ROOM;
+  $("#mType").textContent = isRecruiter ? "Recruiter" : "Candidate";
+  $("#mProf").textContent = P.profileId || "—";
+  if(!P.profileId) $("#mProfRow").style.display = "none";
+  const chip = $("#roleChip"); chip.textContent = isRecruiter ? "Recruiter" : "Candidate"; chip.classList.add(TYPE);
+
+  // Recruiter: details card + Transcript + Next questions.
+  // Candidate: the video and basic interview details only — NO questions, NO transcript.
+  if(isRecruiter){
+    const REC_TIPS = [
+      ["Live captions", "Transcription turns on automatically once you join."],
+      ["Questions", "The generated questions are under the Next questions tab."],
+    ];
+    $("#tips").innerHTML = `<div class="h">For you</div>` +
+      REC_TIPS.map(([b,t])=>`<div class="t"><b>•</b><span><b style="color:var(--ink)">${b}.</b> ${t}</span></div>`).join("");
+    $("#panel").style.display = "flex";
+  } else {
+    // Candidate: keep the small details card; hide the questions/transcript panel entirely.
+    $("#panel").style.display = "none";
+    $("#tips").style.display = "none";
+    $("#mTypeRow").style.display = "none";
+    $("#mProfRow").style.display = "none";
+  }
+
+  document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));
+    document.querySelectorAll(".view").forEach(x=>x.classList.remove("on"));
+    t.classList.add("on"); $("#view-"+t.dataset.view).classList.add("on");
+  }));
+
+  function setStatus(txt, live){ $("#statusTxt").textContent = txt; $("#status").classList.toggle("live", !!live); }
+  function loadScript(src){ return new Promise((res,rej)=>{const s=document.createElement("script");s.src=src;s.onload=res;s.onerror=()=>rej(new Error(src));document.head.appendChild(s);}); }
+
+  // ---- transcript (recruiter) — fed by Jitsi's live captions, no server ----
+  const seen = new Set();
+  function addLine(speaker, text){
+    text=(text||"").trim(); if(!text) return;
+    const key=(speaker||"")+"|"+text; if(seen.has(key)) return; seen.add(key);
+    $("#trEmpty").style.display="none";
+    const d=document.createElement("div"); d.className="line";
+    d.innerHTML=(speaker?`<span class="sp">${speaker.replace(/</g,"&lt;")}</span>`:"")+text.replace(/</g,"&lt;");
+    const list=$("#trList"); list.appendChild(d); list.scrollTop=list.scrollHeight;
+  }
+  // The interview bot's planner (make_plan.py) generates each candidate's questions
+  // from their resume + JD. We load that per candidate:
+  //   plans/<plan-slug>.json  (slug of the candidate name, e.g. ganesh_reddy)
+  //   plans/<room>.json       (per-room override)
+  //   plan.json               (generic fallback)
+  async function loadPlan(){
+    const tries = [];
+    if(P.plan) tries.push(`plans/${encodeURIComponent(P.plan)}.json`);
+    tries.push(`plans/${encodeURIComponent(ROOM)}.json`, "plan.json");
+    for(const url of tries){
+      try{ const r = await fetch(url, {cache:"no-store"}); if(r.ok) return await r.json(); }catch(e){}
+    }
+    return null;
+  }
+  // ---- questions + live scoring (same LLM judge the bot uses) ----
+  const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  let PLAN=null, CURRENT=-1, answerBuf=[], scored={};  // scored[idx]={score,verdict,notes,follow_up_question,answer}
+
+  async function loadQuestions(){
+    PLAN = await loadPlan();
+    if(PLAN && PLAN.role) $("#mRole").textContent = PLAN.role;
+    const qs = (PLAN && PLAN.questions) || [];
+    const list = $("#qList"); list.innerHTML = "";
+    if(!qs.length){ list.innerHTML=`<div class="empty">No questions generated for this interview yet.</div>`; return; }
+    qs.forEach((q,i)=>{
+      const el=document.createElement("div"); el.className="q"; el.dataset.i=i;
+      const exp = (isRecruiter && q.expected && q.expected.length)
+        ? `<div class="exp">${q.expected.map(e=>`<span>${esc(e)}</span>`).join("")}</div>` : "";
+      el.innerHTML=`<div class="num">Q${q.id??(i+1)} · ${esc(q.topic||"")}</div>`+
+        `<div class="qt">${esc(q.q||"")}</div>${exp}`+
+        (isRecruiter ? `<div class="qctl"></div><div class="qres"></div>` : "");
+      list.appendChild(el);
+    });
+    if(isRecruiter) renderCards();
+  }
+
+  function scoreClass(s){ return s>=7?"good":s>=4?"mid":"low"; }
+  function scoreHTML(s){
+    const fu = s.follow_up_question ? `<div class="followup"><b>Suggested follow-up:</b> ${esc(s.follow_up_question)}</div>` : "";
+    return `<div class="scorebar"><span class="scorebadge ${scoreClass(s.score)}">${s.score}/10</span>`+
+      `<span class="verdict">${esc(s.verdict||"")}</span></div>`+
+      (s.notes?`<div class="qnotes">${esc(s.notes)}</div>`:"")+fu;
+  }
+  function renderCards(){
+    $$(`#qList .q`).forEach(el=>{
+      const i=+el.dataset.i, ctl=el.querySelector(".qctl"), res=el.querySelector(".qres");
+      if(!ctl) return;
+      const isCur = i===CURRENT;
+      el.classList.toggle("cur", isCur);
+      if(isCur){
+        const words = answerBuf.join(" ").trim().split(/\s+/).filter(Boolean).length;
+        ctl.innerHTML = `<span class="listening">● Listening — ${words} word${words===1?"":"s"} captured</span>`+
+          `<button class="btn mini primary act-eval">Evaluate answer</button>`;
+        ctl.querySelector(".act-eval").onclick = evaluateCurrent;
+      } else {
+        ctl.innerHTML = `<button class="btn mini act-cur">${scored[i]?"Re-ask / set current":"Set current"}</button>`;
+        ctl.querySelector(".act-cur").onclick = ()=>setCurrent(i);
+      }
+      const s = scored[i];
+      res.innerHTML = s ? (s.pending ? `<div class="qnotes">Scoring…</div>` : scoreHTML(s)) : "";
+    });
+    renderSummary();
+  }
+  function renderSummary(){
+    const keys = Object.keys(scored).filter(k=>scored[k] && !scored[k].pending && typeof scored[k].score==="number");
+    const el = $("#scoreSum");
+    if(!keys.length){ el.style.display="none"; return; }
+    const avg = (keys.reduce((a,k)=>a+scored[k].score,0)/keys.length);
+    el.style.display="block";
+    el.innerHTML = `Scored <b>${keys.length}</b> of <b>${(PLAN.questions||[]).length}</b> · average <b>${avg.toFixed(1)}/10</b>`;
+  }
+  function setCurrent(i){ CURRENT=i; answerBuf=[]; renderCards(); }
+
+  // candidate speech (any speaker that isn't the recruiter) accrues as the answer
+  // to the current question.
+  function onTranscriptLine(speaker, text){
+    if(CURRENT<0) return;
+    if((speaker||"").trim().toLowerCase() === NAME.trim().toLowerCase()) return; // the recruiter asking
+    answerBuf.push(text);
+    const el = document.querySelector(`#qList .q[data-i="${CURRENT}"] .listening`);
+    if(el){ const w=answerBuf.join(" ").trim().split(/\s+/).filter(Boolean).length; el.textContent=`● Listening — ${w} word${w===1?"":"s"} captured`; }
+  }
+
+  async function evaluateCurrent(){
+    if(CURRENT<0 || !PLAN) return;
+    const q = PLAN.questions[CURRENT];
+    const answer = answerBuf.join(" ").trim();
+    if(!answer){ scored[CURRENT]={score:0,verdict:"unanswered",notes:"No candidate speech captured yet.",follow_up_question:null,answer:""}; renderCards(); return; }
+    const earlier = Object.keys(scored).filter(k=>scored[k]&&scored[k].answer).slice(-4)
+      .map(k=>[PLAN.questions[k].q, scored[k].answer]);
+    scored[CURRENT] = {pending:true, answer}; renderCards();
+    try{
+      const res = await fetch("/api/evaluate", {method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({question:q.q, context:q.context||"", expected:q.expected||[], answer,
+          level:PLAN.level||"", vocab:PLAN.vocab||[], earlier})});
+      const j = await res.json();
+      if(!j.ok) throw new Error(j.error||"evaluation failed");
+      scored[CURRENT] = {score:j.score, verdict:j.verdict, notes:j.notes, follow_up_question:j.follow_up_question, answer};
+    }catch(e){
+      scored[CURRENT] = {score:0, verdict:"error", notes:"Scoring failed ("+e.message+"). Is the helper + Ollama running?", follow_up_question:null, answer};
+    }
+    renderCards();
+  }
+
+  // ---- Jitsi embed ----
+  // Jitsi always runs on the Linux box at this IP, regardless of where this page
+  // is opened from. Override per-URL with ?jitsi=https://host:port if it moves.
+  const JITSI_URL = "https://192.168.7.174:8443";
+  async function start(){
+    let publicUrl = P.jitsi || JITSI_URL;
+    const domain=publicUrl.replace(/^https?:\/\//,"");
+    try{ await loadScript(`${publicUrl}/external_api.js`); }
+    catch(e){
+      $("#ph").innerHTML=
+        `<div style="max-width:460px;display:flex;flex-direction:column;gap:14px;align-items:center">
+           <div style="font-size:16px;font-weight:700;color:var(--ink)">One-time setup needed</div>
+           <div style="font-size:13px;line-height:1.5;color:var(--ink-2)">
+             Jitsi is running, but this browser doesn't trust its security certificate yet,
+             so the video can't load. Open it once, click <b>Advanced &rarr; Proceed</b> to accept
+             the certificate, then come back and reload.
+           </div>
+           <a href="${publicUrl}" target="_blank" rel="noopener"
+              style="display:inline-block;padding:11px 20px;border-radius:12px;font-weight:600;
+                     font-size:14px;color:#fff;text-decoration:none;
+                     background:linear-gradient(135deg,var(--accent),var(--accent-2))">
+             Open Jitsi &amp; accept the certificate
+           </a>
+           <button onclick="location.reload()"
+              style="padding:9px 18px;border-radius:12px;font-weight:600;font-size:13px;cursor:pointer;
+                     color:var(--ink);background:var(--surface-2);border:1px solid var(--line)">
+             I've accepted it &mdash; reload
+           </button>
+           <div style="font-size:11px;color:var(--muted)">${domain}</div>
+         </div>`;
+      setStatus("Jitsi unreachable"); return;
+    }
+
+    const recruiterToolbar=["microphone","camera","desktop","tileview","settings","select-background","raisehand","participants-pane","recording","closedcaptions","toggle-camera","fullscreen","hangup"];
+    const candidateToolbar=["microphone","camera","tileview","select-background","settings","fullscreen","hangup"];
+    const api=new JitsiMeetExternalAPI(domain,{
+      roomName:ROOM, parentNode:$("#jitsi"),
+      userInfo:{ displayName:NAME },
+      configOverwrite:{
+        // Skip the prejoin screen so it joins directly (prejoinConfig is the newer
+        // key; prejoinPageEnabled is kept for older Jitsi). This also avoids the
+        // frozen mic/camera preview on that screen.
+        prejoinConfig:{ enabled:false },
+        prejoinPageEnabled:false,
+        disableDeepLinking:true,
+        startWithAudioMuted:false, startWithVideoMuted:false,
+        // Candidate must not see the transcript (jigasi posts it to chat): disable
+        // chat for them where supported; the chatUpdated handler is the fallback.
+        disableChat: !isRecruiter,
+        toolbarButtons: isRecruiter?recruiterToolbar:candidateToolbar,
+      },
+      interfaceConfigOverwrite:{ SHOW_JITSI_WATERMARK:false, DEFAULT_BACKGROUND:"#000000", DISABLE_VIDEO_BACKGROUND:false },
+    });
+
+    api.addEventListener("videoConferenceJoined",()=>{
+      $("#ph").style.display="none"; setStatus("Connected", true);
+      if(isRecruiter){ try{ api.executeCommand("setSubtitles",true,false); }catch(e){} try{ api.executeCommand("toggleSubtitles"); }catch(e){} }
+      if(WANT_REC){ $("#recPill").style.display="flex"; try{ api.executeCommand("startRecording",{mode:"file"}); }catch(e){} }
+    });
+
+    // jigasi posts the transcript into the shared chat. The recruiter reads it from
+    // there, but the CANDIDATE must not see it — so whenever their chat opens (e.g.
+    // auto-opens on a new transcription message), close it again right away.
+    if(!isRecruiter){
+      api.addEventListener("chatUpdated", (e)=>{ try{ if(e && e.isOpen){ api.executeCommand("toggleChat"); } }catch(err){} });
+    }
+    api.addEventListener("videoConferenceLeft",()=>setStatus("Left the room"));
+    api.addEventListener("readyToClose",()=>{ try{ api.dispose(); }catch(e){} });
+
+    function onChunk(ev){ try{
+      const name=(ev&&ev.participant&&ev.participant.name)||(ev&&ev.name)||"";
+      const txt=(ev&&(ev.final||ev.text||ev.stable||(ev.transcript&&ev.transcript.text)))||"";
+      if(txt){ addLine(name,txt); if(isRecruiter) onTranscriptLine(name,txt); }
+    }catch(e){} }
+    ["transcriptionChunkReceived","transcriptionReceived","subtitlesReceived"].forEach(n=>{ try{ api.addEventListener(n,onChunk); }catch(e){} });
+
+    // This Jitsi build posts jigasi transcription into the CHAT as "Speaker: text".
+    // Mirror those lines into our Transcript tab (ignore plain typed chat, which
+    // has no "Name:" prefix). Only the recruiter view has a transcript panel.
+    if(isRecruiter){
+      api.addEventListener("incomingMessage", (e)=>{ try{
+        const msg = (e && e.message) || "";
+        const m = msg.match(/^\s*([^:]{1,48}):\s*(.+)$/s);
+        if(m){ addLine(m[1].trim(), m[2].trim()); onTranscriptLine(m[1].trim(), m[2].trim()); }
+      }catch(err){} });
+    }
+  }
+
+  // Questions are generated by the interview bot's planner (saved per room as
+  // plans/<room>.json, else plan.json) and shown to BOTH the recruiter (Next
+  // questions) and the candidate (Interview questions) — even for a human interview.
+  loadQuestions();
+  start();
+})();
+</script>
+</body>
+</html>

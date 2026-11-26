@@ -1,0 +1,8 @@
+# Cloned-voice TTS microservice — runs in the qwen3tts venv (CUDA PyTorch + Qwen3-TTS).
+# These are the service wrapper's own deps; the heavy stack (qwen-tts, peft, torch,
+# soundfile, librosa, ...) is already installed in the qwen3tts venv per the
+# Voice cloning README.
+fastapi>=0.115,<1
+uvicorn[standard]>=0.32,<1
+anyio>=4
+numpy

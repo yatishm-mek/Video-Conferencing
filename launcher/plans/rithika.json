@@ -1,0 +1,118 @@
+{
+  "candidate": "Lakshmi Rithika Reddy Kathulapalli",
+  "role": "Junior AI/ML Engineer",
+  "level": "0–1 Years",
+  "vocab": [
+    "Python",
+    "SQL",
+    "C",
+    "R",
+    "Supervised Learning",
+    "Unsupervised Learning",
+    "Classification Algorithms",
+    "Anomaly Detection",
+    "Autoencoders",
+    "Decision Trees",
+    "SVM",
+    "Model Evaluation Metrics",
+    "Feature Engineering",
+    "Large Language Models",
+    "Small Language Models",
+    "Prompt Engineering",
+    "Open-source LLM Integration",
+    "Text Summarization",
+    "Structured Information Extraction",
+    "Encoder-only Architectures",
+    "Decoder-only Architectures",
+    "AI Agents",
+    "MCP",
+    "Data Preprocessing",
+    "Data Annotation",
+    "Label Studio",
+    "SQL Server",
+    "Neo4j",
+    "Knowledge Graph Fundamentals",
+    "Ollama",
+    "Docker",
+    "Aim",
+    "AimStack",
+    "Django",
+    "HTML",
+    "JavaScript",
+    "Git"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "topic": "intro",
+      "q": "To start, could you briefly introduce yourself and the kind of work you've been doing recently?",
+      "expected": [
+        "current role or studies",
+        "main areas of work",
+        "one recent project or responsibility"
+      ],
+      "max_followups": 1,
+      "context": "Intro"
+    },
+    {
+      "id": 2,
+      "topic": "project",
+      "q": "In your Suspicious Transaction Detection project, how did you decide which metrics to use for evaluating the autoencoder model?",
+      "expected": [
+        "Explains why precision or recall matters more than accuracy for fraud detection.",
+        "Describes how they handled class imbalance in financial transaction data.",
+        "Mentions comparing their unsupervised approach against supervised baselines like Decision Trees."
+      ],
+      "max_followups": 2,
+      "context": "Resume: Suspicious Transaction Detection Model Using Autoencoder and Risk-Based Approach"
+    },
+    {
+      "id": 3,
+      "topic": "project",
+      "q": "In your internship, you built a prototype for automated report summarization. What steps did you take to check that your prompt changes actually improved the summaries?",
+      "expected": [
+        "Describes a concrete method for checking output quality, such as manual review or automated metrics.",
+        "Explains how they incorporated team feedback into the prompt iterations.",
+        "Discusses challenges in defining success for domain-specific text generation."
+      ],
+      "max_followups": 2,
+      "context": "Resume: AI/ML Intern, report summarization prototype"
+    },
+    {
+      "id": 4,
+      "topic": "jd_skill",
+      "q": "You have used encoder-only models for information extraction. Can you explain the difference between an encoder-only and a decoder-only architecture in simple terms?",
+      "expected": [
+        "Correctly identifies that encoder-only models process full context simultaneously while decoder-only models generate token by token.",
+        "Mentions specific use cases like classification versus text generation.",
+        "Avoids overly complex mathematical details suitable for a junior role."
+      ],
+      "max_followups": 1,
+      "context": "JD: Encoder-based and Decoder-based language models"
+    },
+    {
+      "id": 5,
+      "topic": "fundamentals",
+      "q": "If you were given a dataset with missing values, what is your general approach to cleaning it before training a machine learning model?",
+      "expected": [
+        "Explains different strategies like dropping rows, imputing with mean or median, or using models to predict missing values.",
+        "Mentions checking if the missingness is random or systematic.",
+        "Connects data quality directly to model performance and bias."
+      ],
+      "max_followups": 1,
+      "context": "JD: Data cleaning, preprocessing, annotation"
+    },
+    {
+      "id": 6,
+      "topic": "jd_skill",
+      "q": "When building a model with limited data, how would you balance accuracy against overfitting?",
+      "expected": [
+        "Identify signs of overfitting, like low training error but high validation error",
+        "Propose regularization or cross-validation strategies",
+        "Explain trade-offs between model complexity and generalization"
+      ],
+      "max_followups": 2,
+      "context": "JD (not on resume): Job Overview"
+    }
+  ]
+}

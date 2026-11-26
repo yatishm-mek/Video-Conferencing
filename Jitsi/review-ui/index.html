@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interview Review</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --border:#2a2f3a;
+    --text:#e7e9ee; --muted:#9aa3b2; --accent:#5b8cff; --accent-weak:#24314f;
+    --chip:#232838; --active:#2d3550; --play:#3ad29f;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f4f5f8; --panel:#ffffff; --panel2:#f0f2f6; --border:#e0e3ea;
+      --text:#1b1f27; --muted:#5b6370; --accent:#2f6bff; --accent-weak:#e4ecff;
+      --chip:#eef1f6; --active:#e4ecff; --play:#12a97b;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:var(--bg); color:var(--text);
+    font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    display:flex; flex-direction:column; height:100vh; overflow:hidden;
+  }
+  header{
+    display:flex; align-items:center; gap:12px; padding:12px 18px;
+    border-bottom:1px solid var(--border); background:var(--panel);
+  }
+  header h1{font-size:16px; margin:0; font-weight:650; letter-spacing:.2px}
+  header .sub{color:var(--muted); font-size:12px}
+  header .spacer{flex:1}
+  button.ghost{
+    background:var(--panel2); color:var(--text); border:1px solid var(--border);
+    border-radius:8px; padding:7px 12px; cursor:pointer; font-size:13px;
+  }
+  button.ghost:hover{border-color:var(--accent)}
+  .picker{
+    background:var(--panel2); color:var(--text); border:1px solid var(--border);
+    border-radius:8px; padding:7px 10px; font-size:13px; max-width:42vw;
+  }
+  .picker:hover{border-color:var(--accent)}
+  .layout{display:flex; flex:1; min-height:0}
+  /* sidebar */
+  aside{
+    width:300px; border-right:1px solid var(--border); background:var(--panel);
+    display:flex; flex-direction:column; min-height:0;
+  }
+  .search{padding:10px}
+  .search input{
+    width:100%; background:var(--panel2); border:1px solid var(--border);
+    color:var(--text); border-radius:8px; padding:8px 10px; font-size:13px;
+  }
+  .list{overflow:auto; flex:1}
+  .mitem{
+    padding:11px 14px; border-bottom:1px solid var(--border); cursor:pointer;
+    display:flex; flex-direction:column; gap:3px;
+  }
+  .mitem:hover{background:var(--panel2)}
+  .mitem.active{background:var(--active)}
+  .mitem .name{font-weight:600}
+  .mitem .meta{color:var(--muted); font-size:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+  .badge{font-size:10.5px; padding:1px 6px; border-radius:999px; border:1px solid var(--border); color:var(--muted)}
+  .badge.vid{color:var(--play); border-color:var(--play)}
+  .badge.txt{color:var(--accent); border-color:var(--accent)}
+  /* detail shell: left = sidebar (video + transcript), right = details */
+  main#detail{flex:1; display:flex; min-height:0; overflow:hidden; padding:0}
+  .empty{flex:1; color:var(--muted); display:grid; place-items:center; height:100%; text-align:center; padding:20px}
+  .mhead{margin:0 0 2px; font-size:20px; font-weight:680}
+  .mwhen{color:var(--muted); margin-bottom:12px}
+  .who{display:flex; gap:8px; flex-wrap:wrap}
+  .chip{background:var(--chip); border:1px solid var(--border); border-radius:999px; padding:4px 11px; font-size:12.5px}
+
+  /* left side navbar holding the video + transcript */
+  .vnav{
+    width:540px; min-width:440px; max-width:56%; flex-shrink:0;
+    background:var(--panel); border-right:1px solid var(--border);
+    overflow-y:scroll; overflow-x:hidden; padding:14px;
+    /* block (not flex) so a long transcript overflows and the sidebar scrolls,
+       instead of flex shrinking + clipping the list */
+    display:block;
+  }
+  .vnav > * + *{margin-top:12px}
+  .vnav .videocard{
+    background:#000; border:1px solid var(--border); border-radius:12px;
+    overflow:hidden; width:100%; position:sticky; top:0; z-index:2;
+  }
+  /* big, tall video so it's clearly visible; fills the wider sidebar at 16:9 */
+  .vnav .videocard video{width:100%; height:auto; aspect-ratio:16/9; display:block; max-height:80vh; background:#000}
+  .novideo{
+    background:var(--panel2); border:1px dashed var(--border); border-radius:12px;
+    padding:20px; text-align:center; color:var(--muted); font-size:13px;
+  }
+  .thead{display:flex; align-items:baseline; gap:8px; margin:2px 0 2px}
+  .thead h3{margin:0; font-size:13px; font-weight:650}
+  .thead .hint{color:var(--muted); font-size:11px}
+  .transcript{
+    background:var(--bg); border:1px solid var(--border); border-radius:10px; overflow:hidden;
+  }
+  /* compact, vertical rows so they fit the narrow sidebar */
+  .trow{padding:8px 11px; border-bottom:1px solid var(--border)}
+  .trow:last-child{border-bottom:none}
+  .trow.clickable{cursor:pointer}
+  .trow.clickable:hover{background:var(--panel2)}
+  .trow.active{background:var(--active)}
+  .trow.active .tt{color:var(--accent)}
+  .trow .head{display:flex; align-items:center; gap:8px; margin-bottom:2px}
+  .tt{color:var(--muted); font-variant-numeric:tabular-nums; font-size:11px; white-space:nowrap}
+  .tt .jump{color:var(--play); margin-left:6px}
+  .tsp{font-weight:650; color:var(--text); font-size:12.5px}
+  .ttx{color:var(--text); font-size:13px; line-height:1.45}
+
+  /* right main area holding the details */
+  .maincol{flex:1; overflow:auto; padding:18px 22px; min-width:0}
+  .panel{background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px; max-width:560px}
+  .drow{display:flex; flex-direction:column; gap:7px; padding:11px 0; border-bottom:1px solid var(--border)}
+  .drow:first-of-type{padding-top:4px}
+  .drow:last-child{border-bottom:none}
+  .dl{color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.5px}
+  .dv{font-size:14px}
+  .muted{color:var(--muted)}
+
+  /* always-visible scrollbars ("navigation bars") for the sidebar and main area */
+  .maincol{overflow-y:scroll}
+  .vnav, .maincol, main#detail, body{scrollbar-width:auto; scrollbar-color:var(--accent) var(--panel2)}
+  .vnav::-webkit-scrollbar, .maincol::-webkit-scrollbar, main#detail::-webkit-scrollbar{width:14px; height:14px}
+  .vnav::-webkit-scrollbar-track, .maincol::-webkit-scrollbar-track, main#detail::-webkit-scrollbar-track{
+    background:var(--panel2); border-radius:8px;
+  }
+  .vnav::-webkit-scrollbar-thumb, .maincol::-webkit-scrollbar-thumb, main#detail::-webkit-scrollbar-thumb{
+    background:var(--accent); border-radius:8px; border:3px solid var(--panel2); min-height:40px;
+  }
+  .vnav::-webkit-scrollbar-thumb:hover, .maincol::-webkit-scrollbar-thumb:hover, main#detail::-webkit-scrollbar-thumb:hover{filter:brightness(1.1)}
+
+  @media (max-width:760px){
+    main#detail{flex-direction:column; overflow:auto}
+    .vnav{width:auto; max-width:none; border-right:none; border-bottom:1px solid var(--border)}
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Interview Review</h1>
+    <select id="picker" class="picker" aria-label="Select meeting"></select>
+    <span class="sub" id="count"></span>
+    <span class="spacer"></span>
+    <button class="ghost" id="refresh">↻ Refresh</button>
+  </header>
+  <main id="detail">
+    <div class="empty" id="emptyState">
+      <div>
+        <div style="font-size:15px;margin-bottom:6px">No meeting selected</div>
+        <div class="muted">Recorded interviews will appear here. Record a meeting and refresh.</div>
+      </div>
+    </div>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

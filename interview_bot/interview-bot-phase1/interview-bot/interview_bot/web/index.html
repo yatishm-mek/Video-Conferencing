@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interview Bot</title>
+<style>
+  :root {
+    --bg: #f6f5f2; --panel: #ffffff; --ink: #1c1b19; --muted: #6b6862;
+    --line: #e2dfd8; --accent: #0f766e; --danger: #b42318; --meter: #14b8a6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #151514; --panel: #1e1e1c; --ink: #ecebe7; --muted: #9a978f;
+            --line: #33322e; --accent: #2dd4bf; --danger: #f97066; --meter: #2dd4bf; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 640px; margin: 48px auto; padding: 0 16px; }
+  h1 { font-size: 22px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  button { font: inherit; font-weight: 600; border: 0; border-radius: 8px; padding: 10px 18px;
+           background: var(--accent); color: #fff; cursor: pointer; }
+  button.stop { background: var(--danger); }
+  select { font: inherit; max-width: 100%; padding: 9px 10px; border-radius: 8px; border: 1px solid var(--line);
+           background: var(--panel); color: var(--ink); }
+  button:disabled { opacity: .5; cursor: default; }
+  .status { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--muted); }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); margin-right: 6px; }
+  .dot.on { background: var(--accent); }
+  .meter { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; margin: 18px 0 6px; }
+  .meter > div { height: 100%; width: 0; background: var(--meter); transition: width 60ms linear; }
+  .label { font-size: 12px; color: var(--muted); }
+  .fresh { display: block; margin-top: 14px; font-size: 13px; color: var(--muted); }
+  pre { margin: 16px 0 0; padding: 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+        font-size: 12px; height: 220px; overflow: auto; white-space: pre-wrap; }
+  ol { color: var(--muted); padding-left: 20px; margin: 20px 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Interview bot</h1>
+  <p class="sub">Voice interview test page. Stop and Start again within 15 minutes to rejoin the same interview.</p>
+
+  <div class="card">
+    <div class="row">
+      <button id="btn">Start</button>
+      <select id="mic" title="Microphone"><option value="">Default microphone</option></select>
+      <span class="status"><span id="dot" class="dot"></span><span id="state">idle</span></span>
+    </div>
+    <label class="fresh"><input type="checkbox" id="fresh"> Start a new interview (don't rejoin)</label>
+    <div class="meter"><div id="level"></div></div>
+    <div class="label">Mic level</div>
+    <pre id="log"></pre>
+  </div>
+
+  <ol>
+    <li>Say "yes, I'm ready" after the greeting, then answer each question.</li>
+    <li>Stay silent after a question: after 5 s it asks if you'd like a moment.</li>
+    <li>Try "can you repeat that?", "give me a minute", "I don't know", "are you a bot?".</li>
+  </ol>
+</main>
+
+<audio id="bot-audio" autoplay playsinline></audio>
+
+<script>
+const btn = document.getElementById("btn");
+const stateEl = document.getElementById("state");
+const dot = document.getElementById("dot");
+const levelEl = document.getElementById("level");
+const logEl = document.getElementById("log");
+const micSel = document.getElementById("mic");
+
+async function listMics() {
+  try {
+    const devices = (await navigator.mediaDevices.enumerateDevices()).filter((d) => d.kind === "audioinput");
+    const current = micSel.value;
+    micSel.innerHTML = '<option value="">Default microphone</option>';
+    for (const d of devices) {
+      if (d.deviceId === "default" || d.deviceId === "communications") continue;
+      const o = document.createElement("option");
+      o.value = d.deviceId;
+      o.textContent = d.label || "Microphone " + (micSel.options.length);
+      micSel.appendChild(o);
+    }
+    micSel.value = current;
+    return devices;
+  } catch (e) { log("Could not list microphones: " + e.message); return []; }
+}
+listMics();
+const botAudio = document.getElementById("bot-audio");
+
+let pc = null, dc = null, micStream = null, pingTimer = null, meterRaf = null, audioCtx = null;
+
+function log(msg) {
+  const t = new Date().toLocaleTimeString();
+  logEl.textContent += `[${t}] ${msg}\n`;
+  logEl.scrollTop = logEl.scrollHeight;
+}
+function setState(s, on = false) { stateEl.textContent = s; dot.classList.toggle("on", on); }
+
+function waitForIceGathering(pc, timeoutMs = 3000) {
+  if (pc.iceGatheringState === "complete") return Promise.resolve();
+  return new Promise((resolve) => {
+    const done = () => { pc.removeEventListener("icegatheringstatechange", check); resolve(); };
+    const check = () => { if (pc.iceGatheringState === "complete") done(); };
+    pc.addEventListener("icegatheringstatechange", check);
+    setTimeout(done, timeoutMs);
+  });
+}
+
+async function startMeter(stream) {
+  audioCtx = new AudioContext();
+  // Created after an await, so Chrome may start it suspended: resume or the meter reads silence.
+  if (audioCtx.state !== "running") { try { await audioCtx.resume(); } catch {} }
+  const src = audioCtx.createMediaStreamSource(stream);
+  const analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 512;
+  src.connect(analyser);
+  const buf = new Uint8Array(analyser.fftSize);
+  const tick = () => {
+    analyser.getByteTimeDomainData(buf);
+    let peak = 0;
+    for (const v of buf) peak = Math.max(peak, Math.abs(v - 128));
+    levelEl.style.width = Math.min(100, (peak / 128) * 160) + "%";
+    meterRaf = requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+async function start() {
+  btn.disabled = true;
+  setState("requesting mic…");
+  try {
+    const audio = { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 };
+    if (micSel.value) audio.deviceId = { exact: micSel.value };
+    micStream = await navigator.mediaDevices.getUserMedia({ audio });
+  } catch (e) {
+    log("Mic permission failed: " + e.message);
+    setState("mic blocked"); btn.disabled = false; return;
+  }
+  const track = micStream.getAudioTracks()[0];
+  const s = track.getSettings();
+  log(`Mic: echoCancellation=${s.echoCancellation} noiseSuppression=${s.noiseSuppression} autoGainControl=${s.autoGainControl}`);
+  log(`Mic device: "${track.label}"  enabled=${track.enabled} muted=${track.muted}`);
+  track.onmute = () => log("⚠ Mic went MUTED (Windows or another app took it)");
+  track.onunmute = () => log("Mic unmuted");
+  const mics = await listMics();  // labels are only visible after permission
+  log("Mics found: " + mics.filter((d) => d.deviceId !== "default" && d.deviceId !== "communications").map((d) => d.label).join(" | "));
+  await startMeter(micStream);
+  log("Meter: AudioContext " + audioCtx.state);
+  micSel.disabled = true;
+
+  pc = new RTCPeerConnection();
+  pc.addTransceiver(track, { direction: "sendrecv" });
+  pc.ontrack = (ev) => { botAudio.srcObject = ev.streams[0] || new MediaStream([ev.track]); log("Bot audio track received"); };
+  pc.onconnectionstatechange = () => {
+    const st = pc.connectionState;
+    setState(st, st === "connected");
+    log("Connection: " + st);
+    if (st === "failed" || st === "closed") stop();
+  };
+
+  // Data channel carries keepalive pings; the server uses them to detect disconnects.
+  dc = pc.createDataChannel("chat", { ordered: true });
+  dc.onopen = () => { pingTimer = setInterval(() => dc.readyState === "open" && dc.send("ping: " + Date.now()), 1000); };
+
+  setState("connecting…");
+  await pc.setLocalDescription(await pc.createOffer());
+  await waitForIceGathering(pc);
+
+  const res = await fetch("/api/offer", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      sdp: pc.localDescription.sdp,
+      type: pc.localDescription.type,
+      requestData: { fresh: document.getElementById("fresh").checked },
+    }),
+  });
+  if (!res.ok) { log("Offer failed: HTTP " + res.status); stop(); return; }
+  const answer = await res.json();
+  await pc.setRemoteDescription({ sdp: answer.sdp, type: answer.type });
+  log("Connected, pc_id=" + answer.pc_id);
+
+  btn.textContent = "Stop"; btn.classList.add("stop"); btn.disabled = false;
+}
+
+function stop() {
+  clearInterval(pingTimer); pingTimer = null;
+  if (meterRaf) cancelAnimationFrame(meterRaf);
+  levelEl.style.width = "0";
+  if (audioCtx) { audioCtx.close(); audioCtx = null; }
+  if (dc) { try { dc.close(); } catch {} dc = null; }
+  if (pc) { try { pc.close(); } catch {} pc = null; }
+  if (micStream) { micStream.getTracks().forEach((t) => t.stop()); micStream = null; }
+  botAudio.srcObject = null;
+  micSel.disabled = false;
+  setState("idle");
+  btn.textContent = "Start"; btn.classList.remove("stop"); btn.disabled = false;
+}
+
+btn.onclick = () => (pc ? stop() : start());
+</script>
+</body>
+</html>

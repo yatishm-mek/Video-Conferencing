@@ -1,0 +1,20 @@
+# What NOT to push to the server. Everything else (source + inputs) is copied.
+# Rebuilt or regenerated on the server, or environment-specific:
+
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Runtime output (the app re-creates these dirs on startup):
+logs/
+data/sessions/
+data/tts_cache/
+
+# Environment-specific / secrets: create a fresh .env on the server from
+# .env.example (set HOST=0.0.0.0 and the model there). Remove this line if you
+# deliberately want to copy your local .env and edit it on the server instead.
+.env
+
+.git/

@@ -1,0 +1,1139 @@
+{
+  "version": 1,
+  "model": "moonshine-ai/moonshine-streaming-medium",
+  "source": "D:\\Realtime-ASR\\results\\contextual_benchmark\\benchmark_vocabulary.json",
+  "term_count": 68,
+  "decoder_target_count": 67,
+  "tokenized_count": 67,
+  "invalid_count": 0,
+  "invalid_terms": [],
+  "terms": [
+    {
+      "term": "Docker",
+      "classification": "strong",
+      "sentence_ids": [
+        "u01",
+        "u09",
+        "u18"
+      ],
+      "sentence_count": 3,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        20868
+      ],
+      "token_count": 1
+    },
+    {
+      "term": "Kubernetes",
+      "classification": "strong",
+      "sentence_ids": [
+        "u01",
+        "u09",
+        "u18"
+      ],
+      "sentence_count": 3,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        476,
+        17547
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "RabbitMQ",
+      "classification": "strong",
+      "sentence_ids": [
+        "u02",
+        "u10"
+      ],
+      "sentence_count": 2,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        16155,
+        2966,
+        25566
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Kafka",
+      "classification": "strong",
+      "sentence_ids": [
+        "u02",
+        "u10",
+        "u16"
+      ],
+      "sentence_count": 3,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        476,
+        20817
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "Hadoop",
+      "classification": "strong",
+      "sentence_ids": [
+        "u03",
+        "u10"
+      ],
+      "sentence_count": 2,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        379,
+        18079
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "agentic",
+      "classification": "moderate",
+      "sentence_ids": [
+        "u04",
+        "u12",
+        "u18"
+      ],
+      "sentence_count": 3,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        946,
+        4173
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "agentic workflows",
+      "classification": "moderate",
+      "sentence_ids": [
+        "u04"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        946,
+        4173,
+        27321,
+        29879
+      ],
+      "token_count": 4
+    },
+    {
+      "term": "agentic assistant",
+      "classification": "moderate",
+      "sentence_ids": [
+        "u12"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        946,
+        4173,
+        20255
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "cross site request forgery",
+      "classification": "moderate",
+      "sentence_ids": [
+        "u05",
+        "u11"
+      ],
+      "sentence_count": 2,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        4891,
+        3268,
+        2009,
+        18879,
+        708
+      ],
+      "token_count": 5
+    },
+    {
+      "term": "CSRF",
+      "classification": "moderate",
+      "sentence_ids": [
+        "u11"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        315,
+        14098,
+        29943
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Terraform",
+      "classification": "strong",
+      "sentence_ids": [
+        "u06",
+        "u09"
+      ],
+      "sentence_count": 2,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        20839,
+        689
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "PostgreSQL",
+      "classification": "strong",
+      "sentence_ids": [
+        "u07",
+        "u15"
+      ],
+      "sentence_count": 2,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        4918,
+        7979,
+        4176
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Elasticsearch",
+      "classification": "strong",
+      "sentence_ids": [
+        "u07",
+        "u16"
+      ],
+      "sentence_count": 2,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        1260,
+        20291
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "gRPC",
+      "classification": "strong",
+      "sentence_ids": [
+        "u08",
+        "u17"
+      ],
+      "sentence_count": 2,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        330,
+        29934,
+        9026
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "GraphQL",
+      "classification": "strong",
+      "sentence_ids": [
+        "u08",
+        "u12"
+      ],
+      "sentence_count": 2,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        12367,
+        2239
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "microservices",
+      "classification": "strong",
+      "sentence_ids": [
+        "u17"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        9200,
+        9916
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "Flutter",
+      "classification": "strong",
+      "sentence_ids": [
+        "u19"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        2379,
+        6463
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "React Native",
+      "classification": "strong",
+      "sentence_ids": [
+        "u19"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        9537,
+        19042
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "SwiftUI",
+      "classification": "strong",
+      "sentence_ids": [
+        "u20"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        14156,
+        3120
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "Firebase",
+      "classification": "strong",
+      "sentence_ids": [
+        "u20"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        17731
+      ],
+      "token_count": 1
+    },
+    {
+      "term": "Figma",
+      "classification": "strong",
+      "sentence_ids": [
+        "u21"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        383,
+        2934
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "Adobe XD",
+      "classification": "strong",
+      "sentence_ids": [
+        "u21"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        2087,
+        16945,
+        1060,
+        29928
+      ],
+      "token_count": 4
+    },
+    {
+      "term": "SAP",
+      "classification": "strong",
+      "sentence_ids": [
+        "u22"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        317,
+        3301
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "Salesforce",
+      "classification": "strong",
+      "sentence_ids": [
+        "u22"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        28389,
+        10118
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "ServiceNow",
+      "classification": "strong",
+      "sentence_ids": [
+        "u23"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        6692,
+        10454
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "UiPath",
+      "classification": "strong",
+      "sentence_ids": [
+        "u23"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        501,
+        29875,
+        2605
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "RPA",
+      "classification": "strong",
+      "sentence_ids": [
+        "u23"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        390,
+        7228
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "MQTT",
+      "classification": "strong",
+      "sentence_ids": [
+        "u24"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        341,
+        29984,
+        19988
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Raspberry Pi",
+      "classification": "strong",
+      "sentence_ids": [
+        "u24"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        390,
+        4692,
+        16344,
+        7362
+      ],
+      "token_count": 4
+    },
+    {
+      "term": "Arduino",
+      "classification": "strong",
+      "sentence_ids": [
+        "u25"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        826,
+        28955
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "embedded systems",
+      "classification": "strong",
+      "sentence_ids": [
+        "u25"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        15685,
+        6757
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "ROS",
+      "classification": "strong",
+      "sentence_ids": [
+        "u26"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        390,
+        3267
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "SLAM",
+      "classification": "strong",
+      "sentence_ids": [
+        "u26"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        317,
+        4375,
+        29924
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "ARKit",
+      "classification": "strong",
+      "sentence_ids": [
+        "u27"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        9033,
+        13117
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "augmented reality",
+      "classification": "moderate",
+      "sentence_ids": [
+        "u27"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        18765,
+        287,
+        16832
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "GDPR",
+      "classification": "strong",
+      "sentence_ids": [
+        "u28"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        402,
+        29928,
+        10593
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "ISO 27001",
+      "classification": "strong",
+      "sentence_ids": [
+        "u28"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        17723,
+        29871,
+        29906,
+        29955,
+        29900,
+        29900,
+        29896
+      ],
+      "token_count": 7
+    },
+    {
+      "term": "HIPAA",
+      "classification": "strong",
+      "sentence_ids": [
+        "u29"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        379,
+        5690,
+        6344
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "SOC 2",
+      "classification": "strong",
+      "sentence_ids": [
+        "u29"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        7791,
+        29907,
+        29871,
+        29906
+      ],
+      "token_count": 4
+    },
+    {
+      "term": "Splunk",
+      "classification": "strong",
+      "sentence_ids": [
+        "u30"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        317,
+        572,
+        2960
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Okta",
+      "classification": "strong",
+      "sentence_ids": [
+        "u30"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        3674,
+        941
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "IAM",
+      "classification": "strong",
+      "sentence_ids": [
+        "u31"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        306,
+        5194
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "MFA",
+      "classification": "strong",
+      "sentence_ids": [
+        "u31"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        341,
+        4519
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "SRE",
+      "classification": "strong",
+      "sentence_ids": [
+        "u32"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        317,
+        1525
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "GitOps",
+      "classification": "strong",
+      "sentence_ids": [
+        "u32"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        11786,
+        29949,
+        567
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "ArgoCD",
+      "classification": "strong",
+      "sentence_ids": [
+        "u32"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        826,
+        1484,
+        6530
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Datadog",
+      "classification": "strong",
+      "sentence_ids": [
+        "u32"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        13373,
+        328,
+        468
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Tableau",
+      "classification": "strong",
+      "sentence_ids": [
+        "u33"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        6137,
+        585
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "Power BI",
+      "classification": "strong",
+      "sentence_ids": [
+        "u33"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        9206,
+        350,
+        29902
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Snowflake",
+      "classification": "strong",
+      "sentence_ids": [
+        "u33"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        24392,
+        29888,
+        433,
+        446
+      ],
+      "token_count": 4
+    },
+    {
+      "term": "PyTorch",
+      "classification": "strong",
+      "sentence_ids": [
+        "u34"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        10772,
+        29911,
+        25350
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "vector database",
+      "classification": "strong",
+      "sentence_ids": [
+        "u34"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        4608,
+        2566
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "LangChain",
+      "classification": "strong",
+      "sentence_ids": [
+        "u35"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        10476,
+        14688
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "RAG",
+      "classification": "strong",
+      "sentence_ids": [
+        "u35"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        390,
+        10051
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "REST API",
+      "classification": "strong",
+      "sentence_ids": [
+        "u36"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        16759,
+        3450
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "API gateway",
+      "classification": "strong",
+      "sentence_ids": [
+        "u36"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        3450,
+        28646
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "CORS",
+      "classification": "strong",
+      "sentence_ids": [
+        "u36"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        315,
+        24125
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "DNS",
+      "classification": "strong",
+      "sentence_ids": [
+        "u37"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        16332
+      ],
+      "token_count": 1
+    },
+    {
+      "term": "load balancer",
+      "classification": "strong",
+      "sentence_ids": [
+        "u37"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        2254,
+        6411,
+        25856
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "TCP/IP",
+      "classification": "strong",
+      "sentence_ids": [
+        "u37"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        19374,
+        29914,
+        5690
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "smart contracts",
+      "classification": "strong",
+      "sentence_ids": [
+        "u38"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        15040,
+        8078,
+        29879
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Solidity",
+      "classification": "strong",
+      "sentence_ids": [
+        "u38"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        4956,
+        333,
+        537
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Ethereum",
+      "classification": "strong",
+      "sentence_ids": [
+        "u38"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        382,
+        12711,
+        398
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "Qiskit",
+      "classification": "strong",
+      "sentence_ids": [
+        "u39"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        660,
+        3873,
+        277
+      ],
+      "token_count": 3
+    },
+    {
+      "term": "quantum computing",
+      "classification": "strong",
+      "sentence_ids": [
+        "u39"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        12101,
+        20602
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "Cypress",
+      "classification": "strong",
+      "sentence_ids": [
+        "u40"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        8045,
+        2139
+      ],
+      "token_count": 2
+    },
+    {
+      "term": "JMeter",
+      "classification": "strong",
+      "sentence_ids": [
+        "u40"
+      ],
+      "sentence_count": 1,
+      "decoder_target": true,
+      "benchmark_only": false,
+      "valid": true,
+      "token_ids": [
+        435,
+        29924,
+        1308
+      ],
+      "token_count": 3
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+# ============================================================
+# EZY-Hire — root .gitignore
+# Modules: Jitsi/  interview_bot/  Voice cloning/
+# ============================================================
+
+# ---------- Secrets / environment ----------
+.env
+.env.*
+!.env.example
+*.secret
+secrets.*
+# Jitsi generated passwords / certs
+Jitsi/docker-jitsi-meet/.env.bak
+**/custom-ca/
+*.pem
+*.key
+*.crt
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+**/.venv/
+**/venv/
+
+# ---------- Node / web UIs ----------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ---------- Machine-learning model weights (large) ----------
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+*.ct2
+# faster-whisper / HF model caches
+**/model/model.safetensors
+**/epoch-*/lora.safetensors
+*.npz
+
+# Downloaded ASR model directory (Moonshine/Whisper HF model: weights + tokenizer).
+# Whole folder stays out of git — re-fetch it on the deploy box. Excluding the directory
+# also keeps its 3.6 MB tokenizer.json and small configs out (a dir exclude can't be
+# re-included by the !config.json/!tokenizer.json rules below).
+Jitsi/custom-asr/model/
+# Any other downloaded HF model folder with heavy weights.
+**/models--*/
+**/*.safetensors
+**/*.gguf
+
+# Keep small configs/metadata that describe a model (do NOT ignore these)
+!**/config.json
+!**/generation_config.json
+!**/tokenizer*.json
+!**/processor_config.json
+!**/lora_config.json
+!**/train_args.json
+!**/speaker_embedding.pt
+
+# ---------- Audio / video / recordings ----------
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+*.mp4
+*.mkv
+*.webm
+# but keep tiny reference clips if you want them tracked (uncomment to keep)
+# !**/ref.wav
+
+# ---------- Logs ----------
+logs/
+*.log
+!**/.gitkeep
+
+# ============================================================
+# Module: interview_bot
+# ============================================================
+interview_bot/**/data/sessions/
+interview_bot/**/data/candidates/
+interview_bot/**/data/tts_cache/
+interview_bot/**/data/eval/
+interview_bot/**/logs/
+# Keep sample plan + gitkeeps
+!interview_bot/**/data/sample_plan.json
+!interview_bot/**/data/.gitkeep
+
+# ============================================================
+# Module: Jitsi
+# ============================================================
+# Generated runtime config + storage (recreated by jitsi.ps1 up)
+Jitsi/docker-jitsi-meet/.jitsi-meet-cfg/
+Jitsi/config/storage/
+Jitsi/config/tmp/
+Jitsi/**/storage/recordings/
+Jitsi/**/storage/transcripts/
+# Vendored libs / generated skills (optional — comment out to track)
+Jitsi/custom-asr/libs/
+Jitsi/custom-asr/generated_skills/
+# Nested git repo (track as submodule or flatten instead of committing .git)
+Jitsi/docker-jitsi-meet/.git/
+
+# ============================================================
+# Module: Voice cloning
+# ============================================================
+# Training data recordings and generated outputs (large audio)
+Voice cloning/**/data/voice_datasets/**/*.wav
+Voice cloning/**/data/voice_dataset/*.wav
+Voice cloning/**/output/voice_samples/
+Voice cloning/**/output/voice_studio/
+Voice cloning/**/.git/
+
+# ============================================================
+# OS / editor
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

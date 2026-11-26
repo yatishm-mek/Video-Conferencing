@@ -1,0 +1,1925 @@
+{
+  "version": 1,
+  "model": "moonshine-ai/moonshine-streaming-medium",
+  "source": "D:\\Realtime-ASR\\results\\contextual_benchmark\\benchmark_vocabulary_tokens.json",
+  "term_count": 67,
+  "node_count": 159,
+  "root_child_count": 54,
+  "root_children": [
+    306,
+    315,
+    317,
+    330,
+    341,
+    379,
+    382,
+    383,
+    390,
+    402,
+    435,
+    476,
+    501,
+    660,
+    826,
+    946,
+    1260,
+    2087,
+    2254,
+    2379,
+    3450,
+    3674,
+    4608,
+    4891,
+    4918,
+    4956,
+    6137,
+    6692,
+    7791,
+    8045,
+    9033,
+    9200,
+    9206,
+    9537,
+    10476,
+    10772,
+    11786,
+    12101,
+    12367,
+    13373,
+    14156,
+    15040,
+    15685,
+    16155,
+    16332,
+    16759,
+    17723,
+    17731,
+    18765,
+    19374,
+    20839,
+    20868,
+    24392,
+    28389
+  ],
+  "validation_passed": 67,
+  "validation_failed": 0,
+  "validation_errors": [],
+  "terms": [
+    {
+      "index": 0,
+      "term": "Docker",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        20868
+      ],
+      "token_count": 1,
+      "sentence_ids": [
+        "u01",
+        "u09",
+        "u18"
+      ]
+    },
+    {
+      "index": 1,
+      "term": "Kubernetes",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        476,
+        17547
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u01",
+        "u09",
+        "u18"
+      ]
+    },
+    {
+      "index": 2,
+      "term": "RabbitMQ",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        16155,
+        2966,
+        25566
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u02",
+        "u10"
+      ]
+    },
+    {
+      "index": 3,
+      "term": "Kafka",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        476,
+        20817
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u02",
+        "u10",
+        "u16"
+      ]
+    },
+    {
+      "index": 4,
+      "term": "Hadoop",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        379,
+        18079
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u03",
+        "u10"
+      ]
+    },
+    {
+      "index": 5,
+      "term": "agentic",
+      "classification": "moderate",
+      "decoder_target": true,
+      "token_ids": [
+        946,
+        4173
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u04",
+        "u12",
+        "u18"
+      ]
+    },
+    {
+      "index": 6,
+      "term": "agentic workflows",
+      "classification": "moderate",
+      "decoder_target": true,
+      "token_ids": [
+        946,
+        4173,
+        27321,
+        29879
+      ],
+      "token_count": 4,
+      "sentence_ids": [
+        "u04"
+      ]
+    },
+    {
+      "index": 7,
+      "term": "agentic assistant",
+      "classification": "moderate",
+      "decoder_target": true,
+      "token_ids": [
+        946,
+        4173,
+        20255
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u12"
+      ]
+    },
+    {
+      "index": 8,
+      "term": "cross site request forgery",
+      "classification": "moderate",
+      "decoder_target": true,
+      "token_ids": [
+        4891,
+        3268,
+        2009,
+        18879,
+        708
+      ],
+      "token_count": 5,
+      "sentence_ids": [
+        "u05",
+        "u11"
+      ]
+    },
+    {
+      "index": 9,
+      "term": "CSRF",
+      "classification": "moderate",
+      "decoder_target": true,
+      "token_ids": [
+        315,
+        14098,
+        29943
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u11"
+      ]
+    },
+    {
+      "index": 10,
+      "term": "Terraform",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        20839,
+        689
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u06",
+        "u09"
+      ]
+    },
+    {
+      "index": 11,
+      "term": "PostgreSQL",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        4918,
+        7979,
+        4176
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u07",
+        "u15"
+      ]
+    },
+    {
+      "index": 12,
+      "term": "Elasticsearch",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        1260,
+        20291
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u07",
+        "u16"
+      ]
+    },
+    {
+      "index": 13,
+      "term": "gRPC",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        330,
+        29934,
+        9026
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u08",
+        "u17"
+      ]
+    },
+    {
+      "index": 14,
+      "term": "GraphQL",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        12367,
+        2239
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u08",
+        "u12"
+      ]
+    },
+    {
+      "index": 15,
+      "term": "microservices",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        9200,
+        9916
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u17"
+      ]
+    },
+    {
+      "index": 16,
+      "term": "Flutter",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        2379,
+        6463
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u19"
+      ]
+    },
+    {
+      "index": 17,
+      "term": "React Native",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        9537,
+        19042
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u19"
+      ]
+    },
+    {
+      "index": 18,
+      "term": "SwiftUI",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        14156,
+        3120
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u20"
+      ]
+    },
+    {
+      "index": 19,
+      "term": "Firebase",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        17731
+      ],
+      "token_count": 1,
+      "sentence_ids": [
+        "u20"
+      ]
+    },
+    {
+      "index": 20,
+      "term": "Figma",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        383,
+        2934
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u21"
+      ]
+    },
+    {
+      "index": 21,
+      "term": "Adobe XD",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        2087,
+        16945,
+        1060,
+        29928
+      ],
+      "token_count": 4,
+      "sentence_ids": [
+        "u21"
+      ]
+    },
+    {
+      "index": 22,
+      "term": "SAP",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        317,
+        3301
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u22"
+      ]
+    },
+    {
+      "index": 23,
+      "term": "Salesforce",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        28389,
+        10118
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u22"
+      ]
+    },
+    {
+      "index": 24,
+      "term": "ServiceNow",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        6692,
+        10454
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u23"
+      ]
+    },
+    {
+      "index": 25,
+      "term": "UiPath",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        501,
+        29875,
+        2605
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u23"
+      ]
+    },
+    {
+      "index": 26,
+      "term": "RPA",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        390,
+        7228
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u23"
+      ]
+    },
+    {
+      "index": 27,
+      "term": "MQTT",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        341,
+        29984,
+        19988
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u24"
+      ]
+    },
+    {
+      "index": 28,
+      "term": "Raspberry Pi",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        390,
+        4692,
+        16344,
+        7362
+      ],
+      "token_count": 4,
+      "sentence_ids": [
+        "u24"
+      ]
+    },
+    {
+      "index": 29,
+      "term": "Arduino",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        826,
+        28955
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u25"
+      ]
+    },
+    {
+      "index": 30,
+      "term": "embedded systems",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        15685,
+        6757
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u25"
+      ]
+    },
+    {
+      "index": 31,
+      "term": "ROS",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        390,
+        3267
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u26"
+      ]
+    },
+    {
+      "index": 32,
+      "term": "SLAM",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        317,
+        4375,
+        29924
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u26"
+      ]
+    },
+    {
+      "index": 33,
+      "term": "ARKit",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        9033,
+        13117
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u27"
+      ]
+    },
+    {
+      "index": 34,
+      "term": "augmented reality",
+      "classification": "moderate",
+      "decoder_target": true,
+      "token_ids": [
+        18765,
+        287,
+        16832
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u27"
+      ]
+    },
+    {
+      "index": 35,
+      "term": "GDPR",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        402,
+        29928,
+        10593
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u28"
+      ]
+    },
+    {
+      "index": 36,
+      "term": "ISO 27001",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        17723,
+        29871,
+        29906,
+        29955,
+        29900,
+        29900,
+        29896
+      ],
+      "token_count": 7,
+      "sentence_ids": [
+        "u28"
+      ]
+    },
+    {
+      "index": 37,
+      "term": "HIPAA",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        379,
+        5690,
+        6344
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u29"
+      ]
+    },
+    {
+      "index": 38,
+      "term": "SOC 2",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        7791,
+        29907,
+        29871,
+        29906
+      ],
+      "token_count": 4,
+      "sentence_ids": [
+        "u29"
+      ]
+    },
+    {
+      "index": 39,
+      "term": "Splunk",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        317,
+        572,
+        2960
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u30"
+      ]
+    },
+    {
+      "index": 40,
+      "term": "Okta",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        3674,
+        941
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u30"
+      ]
+    },
+    {
+      "index": 41,
+      "term": "IAM",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        306,
+        5194
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u31"
+      ]
+    },
+    {
+      "index": 42,
+      "term": "MFA",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        341,
+        4519
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u31"
+      ]
+    },
+    {
+      "index": 43,
+      "term": "SRE",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        317,
+        1525
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u32"
+      ]
+    },
+    {
+      "index": 44,
+      "term": "GitOps",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        11786,
+        29949,
+        567
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u32"
+      ]
+    },
+    {
+      "index": 45,
+      "term": "ArgoCD",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        826,
+        1484,
+        6530
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u32"
+      ]
+    },
+    {
+      "index": 46,
+      "term": "Datadog",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        13373,
+        328,
+        468
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u32"
+      ]
+    },
+    {
+      "index": 47,
+      "term": "Tableau",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        6137,
+        585
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u33"
+      ]
+    },
+    {
+      "index": 48,
+      "term": "Power BI",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        9206,
+        350,
+        29902
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u33"
+      ]
+    },
+    {
+      "index": 49,
+      "term": "Snowflake",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        24392,
+        29888,
+        433,
+        446
+      ],
+      "token_count": 4,
+      "sentence_ids": [
+        "u33"
+      ]
+    },
+    {
+      "index": 50,
+      "term": "PyTorch",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        10772,
+        29911,
+        25350
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u34"
+      ]
+    },
+    {
+      "index": 51,
+      "term": "vector database",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        4608,
+        2566
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u34"
+      ]
+    },
+    {
+      "index": 52,
+      "term": "LangChain",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        10476,
+        14688
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u35"
+      ]
+    },
+    {
+      "index": 53,
+      "term": "RAG",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        390,
+        10051
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u35"
+      ]
+    },
+    {
+      "index": 54,
+      "term": "REST API",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        16759,
+        3450
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u36"
+      ]
+    },
+    {
+      "index": 55,
+      "term": "API gateway",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        3450,
+        28646
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u36"
+      ]
+    },
+    {
+      "index": 56,
+      "term": "CORS",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        315,
+        24125
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u36"
+      ]
+    },
+    {
+      "index": 57,
+      "term": "DNS",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        16332
+      ],
+      "token_count": 1,
+      "sentence_ids": [
+        "u37"
+      ]
+    },
+    {
+      "index": 58,
+      "term": "load balancer",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        2254,
+        6411,
+        25856
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u37"
+      ]
+    },
+    {
+      "index": 59,
+      "term": "TCP/IP",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        19374,
+        29914,
+        5690
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u37"
+      ]
+    },
+    {
+      "index": 60,
+      "term": "smart contracts",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        15040,
+        8078,
+        29879
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u38"
+      ]
+    },
+    {
+      "index": 61,
+      "term": "Solidity",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        4956,
+        333,
+        537
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u38"
+      ]
+    },
+    {
+      "index": 62,
+      "term": "Ethereum",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        382,
+        12711,
+        398
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u38"
+      ]
+    },
+    {
+      "index": 63,
+      "term": "Qiskit",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        660,
+        3873,
+        277
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u39"
+      ]
+    },
+    {
+      "index": 64,
+      "term": "quantum computing",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        12101,
+        20602
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u39"
+      ]
+    },
+    {
+      "index": 65,
+      "term": "Cypress",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        8045,
+        2139
+      ],
+      "token_count": 2,
+      "sentence_ids": [
+        "u40"
+      ]
+    },
+    {
+      "index": 66,
+      "term": "JMeter",
+      "classification": "strong",
+      "decoder_target": true,
+      "token_ids": [
+        435,
+        29924,
+        1308
+      ],
+      "token_count": 3,
+      "sentence_ids": [
+        "u40"
+      ]
+    }
+  ],
+  "trie": {
+    "children": {
+      "20868": {
+        "children": {},
+        "term_indices": [
+          0
+        ]
+      },
+      "476": {
+        "children": {
+          "17547": {
+            "children": {},
+            "term_indices": [
+              1
+            ]
+          },
+          "20817": {
+            "children": {},
+            "term_indices": [
+              3
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "16155": {
+        "children": {
+          "2966": {
+            "children": {
+              "25566": {
+                "children": {},
+                "term_indices": [
+                  2
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "379": {
+        "children": {
+          "18079": {
+            "children": {},
+            "term_indices": [
+              4
+            ]
+          },
+          "5690": {
+            "children": {
+              "6344": {
+                "children": {},
+                "term_indices": [
+                  37
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "946": {
+        "children": {
+          "4173": {
+            "children": {
+              "27321": {
+                "children": {
+                  "29879": {
+                    "children": {},
+                    "term_indices": [
+                      6
+                    ]
+                  }
+                },
+                "term_indices": []
+              },
+              "20255": {
+                "children": {},
+                "term_indices": [
+                  7
+                ]
+              }
+            },
+            "term_indices": [
+              5
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "4891": {
+        "children": {
+          "3268": {
+            "children": {
+              "2009": {
+                "children": {
+                  "18879": {
+                    "children": {
+                      "708": {
+                        "children": {},
+                        "term_indices": [
+                          8
+                        ]
+                      }
+                    },
+                    "term_indices": []
+                  }
+                },
+                "term_indices": []
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "315": {
+        "children": {
+          "14098": {
+            "children": {
+              "29943": {
+                "children": {},
+                "term_indices": [
+                  9
+                ]
+              }
+            },
+            "term_indices": []
+          },
+          "24125": {
+            "children": {},
+            "term_indices": [
+              56
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "20839": {
+        "children": {
+          "689": {
+            "children": {},
+            "term_indices": [
+              10
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "4918": {
+        "children": {
+          "7979": {
+            "children": {
+              "4176": {
+                "children": {},
+                "term_indices": [
+                  11
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "1260": {
+        "children": {
+          "20291": {
+            "children": {},
+            "term_indices": [
+              12
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "330": {
+        "children": {
+          "29934": {
+            "children": {
+              "9026": {
+                "children": {},
+                "term_indices": [
+                  13
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "12367": {
+        "children": {
+          "2239": {
+            "children": {},
+            "term_indices": [
+              14
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "9200": {
+        "children": {
+          "9916": {
+            "children": {},
+            "term_indices": [
+              15
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "2379": {
+        "children": {
+          "6463": {
+            "children": {},
+            "term_indices": [
+              16
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "9537": {
+        "children": {
+          "19042": {
+            "children": {},
+            "term_indices": [
+              17
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "14156": {
+        "children": {
+          "3120": {
+            "children": {},
+            "term_indices": [
+              18
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "17731": {
+        "children": {},
+        "term_indices": [
+          19
+        ]
+      },
+      "383": {
+        "children": {
+          "2934": {
+            "children": {},
+            "term_indices": [
+              20
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "2087": {
+        "children": {
+          "16945": {
+            "children": {
+              "1060": {
+                "children": {
+                  "29928": {
+                    "children": {},
+                    "term_indices": [
+                      21
+                    ]
+                  }
+                },
+                "term_indices": []
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "317": {
+        "children": {
+          "3301": {
+            "children": {},
+            "term_indices": [
+              22
+            ]
+          },
+          "4375": {
+            "children": {
+              "29924": {
+                "children": {},
+                "term_indices": [
+                  32
+                ]
+              }
+            },
+            "term_indices": []
+          },
+          "572": {
+            "children": {
+              "2960": {
+                "children": {},
+                "term_indices": [
+                  39
+                ]
+              }
+            },
+            "term_indices": []
+          },
+          "1525": {
+            "children": {},
+            "term_indices": [
+              43
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "28389": {
+        "children": {
+          "10118": {
+            "children": {},
+            "term_indices": [
+              23
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "6692": {
+        "children": {
+          "10454": {
+            "children": {},
+            "term_indices": [
+              24
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "501": {
+        "children": {
+          "29875": {
+            "children": {
+              "2605": {
+                "children": {},
+                "term_indices": [
+                  25
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "390": {
+        "children": {
+          "7228": {
+            "children": {},
+            "term_indices": [
+              26
+            ]
+          },
+          "4692": {
+            "children": {
+              "16344": {
+                "children": {
+                  "7362": {
+                    "children": {},
+                    "term_indices": [
+                      28
+                    ]
+                  }
+                },
+                "term_indices": []
+              }
+            },
+            "term_indices": []
+          },
+          "3267": {
+            "children": {},
+            "term_indices": [
+              31
+            ]
+          },
+          "10051": {
+            "children": {},
+            "term_indices": [
+              53
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "341": {
+        "children": {
+          "29984": {
+            "children": {
+              "19988": {
+                "children": {},
+                "term_indices": [
+                  27
+                ]
+              }
+            },
+            "term_indices": []
+          },
+          "4519": {
+            "children": {},
+            "term_indices": [
+              42
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "826": {
+        "children": {
+          "28955": {
+            "children": {},
+            "term_indices": [
+              29
+            ]
+          },
+          "1484": {
+            "children": {
+              "6530": {
+                "children": {},
+                "term_indices": [
+                  45
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "15685": {
+        "children": {
+          "6757": {
+            "children": {},
+            "term_indices": [
+              30
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "9033": {
+        "children": {
+          "13117": {
+            "children": {},
+            "term_indices": [
+              33
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "18765": {
+        "children": {
+          "287": {
+            "children": {
+              "16832": {
+                "children": {},
+                "term_indices": [
+                  34
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "402": {
+        "children": {
+          "29928": {
+            "children": {
+              "10593": {
+                "children": {},
+                "term_indices": [
+                  35
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "17723": {
+        "children": {
+          "29871": {
+            "children": {
+              "29906": {
+                "children": {
+                  "29955": {
+                    "children": {
+                      "29900": {
+                        "children": {
+                          "29900": {
+                            "children": {
+                              "29896": {
+                                "children": {},
+                                "term_indices": [
+                                  36
+                                ]
+                              }
+                            },
+                            "term_indices": []
+                          }
+                        },
+                        "term_indices": []
+                      }
+                    },
+                    "term_indices": []
+                  }
+                },
+                "term_indices": []
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "7791": {
+        "children": {
+          "29907": {
+            "children": {
+              "29871": {
+                "children": {
+                  "29906": {
+                    "children": {},
+                    "term_indices": [
+                      38
+                    ]
+                  }
+                },
+                "term_indices": []
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "3674": {
+        "children": {
+          "941": {
+            "children": {},
+            "term_indices": [
+              40
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "306": {
+        "children": {
+          "5194": {
+            "children": {},
+            "term_indices": [
+              41
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "11786": {
+        "children": {
+          "29949": {
+            "children": {
+              "567": {
+                "children": {},
+                "term_indices": [
+                  44
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "13373": {
+        "children": {
+          "328": {
+            "children": {
+              "468": {
+                "children": {},
+                "term_indices": [
+                  46
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "6137": {
+        "children": {
+          "585": {
+            "children": {},
+            "term_indices": [
+              47
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "9206": {
+        "children": {
+          "350": {
+            "children": {
+              "29902": {
+                "children": {},
+                "term_indices": [
+                  48
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "24392": {
+        "children": {
+          "29888": {
+            "children": {
+              "433": {
+                "children": {
+                  "446": {
+                    "children": {},
+                    "term_indices": [
+                      49
+                    ]
+                  }
+                },
+                "term_indices": []
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "10772": {
+        "children": {
+          "29911": {
+            "children": {
+              "25350": {
+                "children": {},
+                "term_indices": [
+                  50
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "4608": {
+        "children": {
+          "2566": {
+            "children": {},
+            "term_indices": [
+              51
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "10476": {
+        "children": {
+          "14688": {
+            "children": {},
+            "term_indices": [
+              52
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "16759": {
+        "children": {
+          "3450": {
+            "children": {},
+            "term_indices": [
+              54
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "3450": {
+        "children": {
+          "28646": {
+            "children": {},
+            "term_indices": [
+              55
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "16332": {
+        "children": {},
+        "term_indices": [
+          57
+        ]
+      },
+      "2254": {
+        "children": {
+          "6411": {
+            "children": {
+              "25856": {
+                "children": {},
+                "term_indices": [
+                  58
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "19374": {
+        "children": {
+          "29914": {
+            "children": {
+              "5690": {
+                "children": {},
+                "term_indices": [
+                  59
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "15040": {
+        "children": {
+          "8078": {
+            "children": {
+              "29879": {
+                "children": {},
+                "term_indices": [
+                  60
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "4956": {
+        "children": {
+          "333": {
+            "children": {
+              "537": {
+                "children": {},
+                "term_indices": [
+                  61
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "382": {
+        "children": {
+          "12711": {
+            "children": {
+              "398": {
+                "children": {},
+                "term_indices": [
+                  62
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "660": {
+        "children": {
+          "3873": {
+            "children": {
+              "277": {
+                "children": {},
+                "term_indices": [
+                  63
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      },
+      "12101": {
+        "children": {
+          "20602": {
+            "children": {},
+            "term_indices": [
+              64
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "8045": {
+        "children": {
+          "2139": {
+            "children": {},
+            "term_indices": [
+              65
+            ]
+          }
+        },
+        "term_indices": []
+      },
+      "435": {
+        "children": {
+          "29924": {
+            "children": {
+              "1308": {
+                "children": {},
+                "term_indices": [
+                  66
+                ]
+              }
+            },
+            "term_indices": []
+          }
+        },
+        "term_indices": []
+      }
+    },
+    "term_indices": []
+  }
+}

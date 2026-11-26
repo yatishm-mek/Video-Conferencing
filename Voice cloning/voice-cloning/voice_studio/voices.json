@@ -1,0 +1,42 @@
+{
+  "default": "rithika",
+  "voices": [
+    {
+      "id": "rithika",
+      "name": "Rithika",
+      "run": "output/voice_finetune/run2",
+      "epoch": 6,
+      "real": "data/voice_dataset/ref.wav",
+      "sample": "output/voice_samples/run2_epoch6_smooth.wav",
+      "about": "30 min read aloud from a script",
+      "color": "#7c5cff"
+    },
+    {
+      "id": "aditi",
+      "name": "Aditi",
+      "run": "output/voice_finetune/aditi",
+      "epoch": 6,
+      "real": "data/voice_datasets/aditi/ref.wav",
+      "about": "28 min of natural speech",
+      "color": "#f2672e"
+    },
+    {
+      "id": "sharanya",
+      "name": "Sharanya",
+      "run": "output/voice_finetune/sharanya",
+      "epoch": 6,
+      "real": "data/voice_datasets/sharanya/ref.wav",
+      "about": "31 min of natural speech",
+      "color": "#0f9d8a"
+    },
+    {
+      "id": "suresh",
+      "name": "Suresh",
+      "run": "output/voice_finetune/suresh",
+      "epoch": 6,
+      "real": "data/voice_datasets/suresh/ref.wav",
+      "about": "36 min of natural speech",
+      "color": "#2f6fe0"
+    }
+  ]
+}

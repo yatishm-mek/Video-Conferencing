@@ -1,0 +1,111 @@
+{
+  "candidate": "M. Sai Shashank",
+  "role": "AI/ML Engineer – GenAI",
+  "level": "0-1 years",
+  "vocab": [
+    "XGBoost",
+    "FastAPI",
+    "RAG",
+    "BM25",
+    "FAISS",
+    "LLMs",
+    "PostgreSQL",
+    "Docker",
+    "Label Studio",
+    "OpenRouter",
+    "Sentence-Transformers",
+    "Scikit-learn",
+    "Pydantic",
+    "SQLAlchemy",
+    "MCP",
+    "Prompt Engineering",
+    "TF-IDF",
+    "Embeddings",
+    "Hyperparameter Tuning",
+    "Cross-Validation",
+    "Model Evaluation",
+    "Data Annotation",
+    "Agentic AI",
+    "Time Series",
+    "Prophet",
+    "SARIMAX",
+    "LightGBM",
+    "Streamlit",
+    "Git",
+    "Experiment Tracking"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "topic": "intro",
+      "q": "To start, could you briefly introduce yourself and the kind of work you've been doing recently?",
+      "expected": [
+        "current role or studies",
+        "main areas of work",
+        "one recent project or responsibility"
+      ],
+      "max_followups": 1,
+      "context": "Intro"
+    },
+    {
+      "id": 2,
+      "topic": "project",
+      "q": "In your InsightAI project, what specific problem did you solve with hybrid retrieval?",
+      "expected": [
+        "Explain why they combined keyword and vector search for better coverage.",
+        "Describe how they checked retrieval quality or handled irrelevant results.",
+        "Mention the trade-offs between speed and accuracy in their design."
+      ],
+      "max_followups": 2,
+      "context": "Resume: InsightAI project (hybrid retrieval)"
+    },
+    {
+      "id": 3,
+      "topic": "project",
+      "q": "For your SLA-Triage system, how did you handle data preprocessing before training the model?",
+      "expected": [
+        "Detail specific steps like handling missing values or feature scaling.",
+        "Explain why they chose XGBoost over other models for this task.",
+        "Describe how they validated the pipeline's performance with simulations."
+      ],
+      "max_followups": 2,
+      "context": "Resume: SLA-Triage project"
+    },
+    {
+      "id": 4,
+      "topic": "jd_skill",
+      "q": "How do you decide which hyperparameters to tune when training a model for prediction?",
+      "expected": [
+        "Discuss strategies like grid search or random search with cross-validation.",
+        "Explain how they balance model complexity against overfitting risks.",
+        "Mention tools like Aim used to track these experiments effectively."
+      ],
+      "max_followups": 1,
+      "context": "JD: Hyperparameter Optimization"
+    },
+    {
+      "id": 5,
+      "topic": "fundamentals",
+      "q": "Explain how cross-validation helps prevent overfitting during model evaluation.",
+      "expected": [
+        "Describe splitting data into folds for robust performance estimation.",
+        "Clarify why it matters more than a single train-test split for small datasets.",
+        "Mention how it guides decisions on model complexity or feature selection."
+      ],
+      "max_followups": 1,
+      "context": "JD: Model Evaluation"
+    },
+    {
+      "id": 6,
+      "topic": "jd_skill",
+      "q": "When building a RAG pipeline, what factors influence your choice of embedding model?",
+      "expected": [
+        "Consider data domain specificity and computational resource constraints.",
+        "Discuss latency requirements versus semantic search accuracy needs.",
+        "Explain how they validate embeddings against real-world query performance."
+      ],
+      "max_followups": 1,
+      "context": "JD: Vector Search and Semantic Search"
+    }
+  ]
+}

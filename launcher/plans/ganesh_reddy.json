@@ -1,0 +1,110 @@
+{
+  "candidate": "Ganesh Reddy",
+  "role": "Junior AI/ML Engineer",
+  "level": "0-1 years",
+  "vocab": [
+    "Python",
+    "SQL",
+    "Pandas",
+    "NumPy",
+    "Scikit-learn",
+    "PyTorch",
+    "Matplotlib",
+    "Seaborn",
+    "Decision Tree",
+    "Gradient Boosting",
+    "RMSE",
+    "MAE",
+    "R-squared",
+    "Power BI",
+    "DAX",
+    "Excel",
+    "Hugging Face",
+    "Transformers",
+    "Prompt Engineering",
+    "LLM",
+    "Label Studio",
+    "MCP",
+    "Docker",
+    "Aim",
+    "ETL",
+    "Feature Engineering",
+    "Hyperparameter Tuning",
+    "ANN",
+    "CNN"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "topic": "intro",
+      "q": "To start, could you briefly introduce yourself and the kind of work you've been doing recently?",
+      "expected": [
+        "current role or studies",
+        "main areas of work",
+        "one recent project or responsibility"
+      ],
+      "max_followups": 1,
+      "context": "Intro"
+    },
+    {
+      "id": 2,
+      "topic": "project",
+      "q": "In your Solar Power Forecasting project, what specific preprocessing steps did you take on the sequential energy data before training the models?",
+      "expected": [
+        "Explain handling of missing values or temporal feature extraction like sliding windows.",
+        "Explain how they split train and test data without breaking the time order, or how they scaled features.",
+        "Detail how they validated outputs using metrics like RMSE or MAE."
+      ],
+      "max_followups": 2,
+      "context": "Resume: Solar Power Forecasting Using Machine Learning (Time Series)"
+    },
+    {
+      "id": 3,
+      "topic": "jd_skill",
+      "q": "You have experience with Hugging Face Transformers; how would you choose between different open-source model configurations for a specific domain task?",
+      "expected": [
+        "Discuss trade-offs between model size, inference speed, and accuracy.",
+        "Explain criteria like context length or parameter count based on available compute.",
+        "Mention evaluation strategies to compare outputs across multiple variants."
+      ],
+      "max_followups": 1,
+      "context": "JD: Hugging Face Transformers / Resume: Generative AI"
+    },
+    {
+      "id": 4,
+      "topic": "fundamentals",
+      "q": "When evaluating a regression model for energy prediction, why is RMSE often preferred over Accuracy, and what does a high R-squared value actually tell us about the data fit?",
+      "expected": [
+        "Explain that Accuracy is for classification while RMSE measures error magnitude in units.",
+        "Clarify that R-squared indicates the proportion of variance explained by the model.",
+        "Mention limitations like sensitivity to outliers or assumptions of linearity."
+      ],
+      "max_followups": 1,
+      "context": "Fundamentals: Regression Metrics"
+    },
+    {
+      "id": 5,
+      "topic": "experience",
+      "q": "Can you describe a time when your initial machine learning model underperformed, and what specific steps did you take to diagnose the issue?",
+      "expected": [
+        "Mention checking for data leakage, incorrect feature scaling, or poor train-test splits.",
+        "Describe error analysis techniques like looking at confusion matrices or residual plots.",
+        "Explain how they iteratively tuned hyperparameters or tried different algorithms."
+      ],
+      "max_followups": 2,
+      "context": "Experience: Model Debugging"
+    },
+    {
+      "id": 6,
+      "topic": "jd_skill",
+      "q": "You list CNNs in your skills. In simple terms, how does a convolutional neural network process an image differently from a regular fully connected network?",
+      "expected": [
+        "Explains that filters slide over the image to detect local patterns like edges.",
+        "Mentions weight sharing, so far fewer parameters than a fully connected layer.",
+        "Mentions pooling or how deeper layers learn more complex features."
+      ],
+      "max_followups": 2,
+      "context": "JD: Convolutional Neural Networks (CNN) (resume skills list, no project)"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Extra deps to run whisper_ws_server.py (on top of requirements.txt, which already
+# has scipy, silero-vad, soundfile, numpy). Install into the custom-asr venv.
+#
+#   pip install -r requirements.txt -r requirements-whisper.txt
+#
+# faster-whisper bundles ctranslate2. For GPU (Windows or Linux), also install the
+# CUDA 12 wheels below so ctranslate2 finds cuBLAS/cuDNN.
+faster-whisper>=1.0
+# Silero VAD (asr_ws_common) needs torch; CPU build is fine (VAD is tiny).
+torch
+# --- GPU only (CUDA 12) — skip on a CPU-only box ---
+nvidia-cublas-cu12
+nvidia-cudnn-cu12==9.*

@@ -1,0 +1,102 @@
+{
+  "candidate": "Raghava Nithyanand",
+  "role": "Java Backend Developer",
+  "level": "0-2 Years",
+  "vocab": [
+    "Java",
+    "PostgreSQL",
+    "RabbitMQ",
+    "SQL Triggers",
+    "FastAPI",
+    "Docker",
+    "Neo4j",
+    "PyTorch",
+    "Prompt Engineering",
+    "REST API",
+    "Middleware",
+    "Event-Driven",
+    "Polling",
+    "Redis",
+    "Streamlit",
+    "Knowledge Graph",
+    "MCP",
+    "Ollama",
+    "Git",
+    "CNN",
+    "Vision Transformer"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "topic": "intro",
+      "q": "To start, could you briefly introduce yourself and the kind of work you've been doing recently?",
+      "expected": [
+        "current role or studies",
+        "main areas of work",
+        "one recent project or responsibility"
+      ],
+      "max_followups": 1,
+      "context": "Intro"
+    },
+    {
+      "id": 2,
+      "topic": "project",
+      "q": "In your Retail Customer Data Consolidation project, what specific challenge did you face when synchronizing data from POS terminals to the CRM, and how did you verify the solution worked?",
+      "expected": [
+        "Describes a real issue like latency or data consistency.",
+        "Explains the role of RabbitMQ triggers or Java polling in solving it.",
+        "Details how they checked for successful data sync without modifying source systems."
+      ],
+      "max_followups": 2,
+      "context": "Resume: Retail Customer Data Consolidation & Real-Time Synchronization"
+    },
+    {
+      "id": 3,
+      "topic": "project",
+      "q": "For your FractureNet project, how did you decide between the different deep learning architectures like ResNet and Vision Transformer, and what metrics did you use to pick the winner?",
+      "expected": [
+        "Explains trade-offs between model size and accuracy.",
+        "Mentions specific metrics like F1-score or Cohen's Kappa used for evaluation.",
+        "Describes how data augmentation helped improve performance on X-ray images."
+      ],
+      "max_followups": 2,
+      "context": "Resume: FractureNet: Deep Learning-Based Fracture Classification"
+    },
+    {
+      "id": 4,
+      "topic": "jd_skill",
+      "q": "In your middleware project you used SQL triggers and Java polling to detect data changes. What is a database trigger, and when would you choose a trigger over polling?",
+      "expected": [
+        "Explains that a trigger runs automatically on an insert, update or delete in the database.",
+        "Compares triggers (immediate, inside the database) with polling (periodic checks, extra load and delay).",
+        "Mentions a trade-off such as load on the source database or not being allowed to change the source system."
+      ],
+      "max_followups": 1,
+      "context": "JD: Database Triggers / Resume: Retail Customer Data Consolidation"
+    },
+    {
+      "id": 5,
+      "topic": "fundamentals",
+      "q": "Explain the difference between a distributed system and a monolithic application, and why event-driven architecture is often preferred for middleware solutions.",
+      "expected": [
+        "Contrasts coupling and scalability of both types.",
+        "Mentions how events decouple services in a distributed setup.",
+        "Explains benefits like fault isolation or independent scaling."
+      ],
+      "max_followups": 1,
+      "context": "JD: Distributed Systems Fundamentals"
+    },
+    {
+      "id": 6,
+      "topic": "jd_skill",
+      "q": "When designing a class, how do you decide whether to use inheritance or composition?",
+      "expected": [
+        "Prioritizes composition for flexibility",
+        "Avoids deep inheritance hierarchies",
+        "Considers runtime polymorphism"
+      ],
+      "max_followups": 2,
+      "context": "JD (not on resume): Object-Oriented Programming"
+    }
+  ]
+}

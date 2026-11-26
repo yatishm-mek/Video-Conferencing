@@ -1,0 +1,20 @@
+# Phase 1 — audio loop. Python 3.11+.
+# Pipecat extras pull in: aiortc (WebRTC), silero (ONNX VAD, Smart Turn v3 runs on
+# the onnxruntime core dep), faster-whisper 1.2.x, kokoro-onnx, Ollama + Groq clients.
+pipecat-ai[webrtc,silero,whisper,kokoro,ollama,groq]==1.15.0
+fastapi>=0.115,<1
+uvicorn[standard]>=0.32,<1
+pydantic>=2.10,<3
+pydantic-settings>=2.6,<3
+python-dotenv>=1.0
+
+# Bot-in-Jitsi bridge (interview_bot.jitsi_run): headless Chromium joins the room.
+# After installing, also run:  python -m playwright install chromium
+playwright>=1.40
+
+# Tests
+pytest>=8
+pytest-asyncio>=0.24
+
+# Added in later phases (not needed yet):
+#   Phase 5: pymupdf, pytesseract (+ Tesseract binary), python-multipart

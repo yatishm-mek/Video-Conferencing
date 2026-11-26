@@ -1,0 +1,467 @@
+# Natural speech script: about 30 minutes of speech (about 45 minutes to record).
+# Each person reads the same script. Lines starting with # are notes and are not read.
+#
+# How to record (this matters more than anything else):
+#  - Don't read it like a script. Look at the line, take it in, then SAY it the way you'd
+#    say it to a friend. Your own rhythm, your own ups and downs.
+#  - Say each line in one flowing go, with NO pauses in the middle.
+#  - Then stop for about one full second before the next line.
+#  - Made a mistake? Pause, and say the whole line again. Bad pieces are dropped.
+#  - Quiet room, same microphone and same distance every session (about a hand's width).
+#  - No music, fan, or other voices. Don't let the recording get too loud.
+#  - One session = one file (about 4 to 5 minutes). Take a break and drink water in between.
+#  - Keep every person's recordings in their own separate folder.
+
+# ---------- Session 1: catching up with a friend ----------
+Hey, I was just thinking about you this morning.
+You won't believe who I ran into at the bus stop.
+It's been ages since we last talked properly.
+I keep meaning to call you, and then the day just disappears.
+So tell me, what's new with you these days?
+Nothing much has changed on my side, to be honest.
+I finally moved to the new flat last month.
+It's smaller than the old one, but I really like it.
+You should come over and see it sometime.
+How about this Sunday, if you're not busy?
+I can make that pasta you liked so much.
+Oh, and bring your sister along if she's around.
+She still owes me that book, by the way.
+I'm kidding, she can keep it as long as she wants.
+Did you ever sort out that problem with your landlord?
+That sounds like such a headache, I'm glad it's over.
+I've been sleeping much better since I stopped drinking coffee at night.
+You look really well, have you been doing something different?
+I've started walking to work whenever the weather allows it.
+It takes longer, but it clears my head.
+We should do this more often, you know.
+Remember when we used to talk for hours on the terrace?
+I still think about those evenings all the time.
+Back then, we thought we had everything figured out.
+We had absolutely no idea what we were doing, did we?
+Anyway, how are your parents keeping these days?
+Please give them my regards when you see them.
+My dad has suddenly become obsessed with gardening.
+He sends me photos of his tomatoes every single day.
+Honestly, it's the sweetest thing I've ever seen.
+My mom just laughs at him and goes back to her crossword.
+I think I'm turning into both of them at once.
+Okay, I should let you go, I know you've got things to do.
+Let's not leave it so long next time, all right?
+Text me when you're free, and we'll fix a day.
+It was so good hearing your voice again.
+Take care of yourself, and don't work too hard.
+Talk to you soon.
+Wait, before you go, I almost forgot to tell you something.
+My cousin's getting married in February, and you're invited.
+I told her you'd definitely come and dance badly with us.
+You can't say no now, it's already been decided.
+All right, now I'm really hanging up.
+Bye, and say hi to everyone for me.
+
+# ---------- Session 2: opinions and reactions ----------
+I honestly think that was the best film I've seen all year.
+The ending completely caught me off guard.
+I'm not sure I agree with you on that one.
+You might be right, but I see it a little differently.
+That's actually a really good point, I hadn't considered it.
+I used to hate olives, and now I can't get enough of them.
+People worry far too much about what others think.
+If it were up to me, I'd take the train every time.
+I don't mind either way, you pick.
+To me, the book was a lot better than the series.
+Some of those reviews are just plain unfair.
+I wouldn't pay that much for a pair of headphones.
+Maybe I'm old-fashioned, but I still like writing letters.
+It's not perfect, but it's definitely good enough for now.
+That's the funniest thing I've heard all week.
+I can't stand it when people talk during a movie.
+You know what really annoys me, slow walkers in narrow lanes.
+Honestly, I think you worry about it more than anyone else does.
+I'd say go for it, what's the worst that could happen?
+That doesn't sound right to me, are you sure about it?
+Well, I guess that depends on how you look at it.
+I've changed my mind about that restaurant, it's actually lovely.
+It's a nice idea, but I don't think it'll work in practice.
+Nobody told me it was going to be this complicated.
+If you ask me, the old design was much easier to use.
+I think we're making this harder than it needs to be.
+Let's be honest, none of us read the instructions.
+That's exactly what I was trying to say earlier.
+You took the words right out of my mouth.
+I'm with you on that, it's completely ridiculous.
+Hmm, I hadn't really thought about it like that before.
+No way, there's no chance that's actually true.
+Fair enough, I'll give it another try this weekend.
+It's a bit overrated, if I'm being really honest.
+I'd rather have a small house near my friends than a big one far away.
+Sometimes the cheapest option ends up costing you the most.
+You can't really judge someone after meeting them just once.
+I think kindness matters a lot more than being clever.
+Good music doesn't need to be complicated to move you.
+It's strange how a smell can take you right back to childhood.
+I really believe things tend to work out in the end.
+Personally, I'd never go back to living in a big city.
+That's a very generous way of putting it.
+Okay, you've convinced me, let's do it your way.
+
+# ---------- Session 3: telling what happened ----------
+So this morning I got on completely the wrong bus.
+I didn't notice until we were halfway across town.
+By the time I realised, I was already twenty minutes late.
+Then, of course, my phone decided to die on me.
+I had to ask a stranger for directions like it was the nineties.
+She was really sweet and walked me all the way to the corner.
+When I finally got there, the meeting had been cancelled.
+Last week, I tried to bake a birthday cake for my brother.
+I forgot the sugar, and nobody had the heart to tell me.
+He ate two whole slices and said it was delicious.
+We laughed about it for the rest of the evening.
+Did I ever tell you about the time I got locked out in the rain?
+I stood under the neighbour's porch for almost two hours.
+My keys were in my other jacket the entire time.
+When I was about nine, we had a dog called Biscuit.
+He used to wait by the gate until I came home from school.
+One day he followed me all the way into the classroom.
+The teacher pretended to be angry, but she was trying not to smile.
+Last summer, my friends and I drove up to the hills.
+The car broke down right in the middle of nowhere.
+A farmer stopped and towed us to the next village with his tractor.
+His wife wouldn't let us leave until we'd eaten something.
+We ended up staying for dinner and playing cards with their kids.
+It turned out to be the best part of the whole trip.
+My grandfather once walked twelve kilometres just to return a borrowed umbrella.
+He said a promise doesn't get smaller because the road gets longer.
+I've never forgotten him saying that.
+A few years ago, I lost my wallet on a crowded train.
+Two days later, a man turned up at my door with it.
+Every single rupee was still inside.
+He wouldn't even take a cup of tea as thanks.
+The first time I tried to swim, I panicked and swallowed half the pool.
+My instructor just stood there laughing and pulled me out.
+By the end of that summer, you couldn't get me out of the water.
+I once spent an entire afternoon looking for my glasses.
+They were sitting on top of my head, obviously.
+We were walking home when the lights went out across the whole street.
+Everyone came outside and started chatting with their neighbours.
+Somebody brought out a guitar, and the kids started singing.
+When the power came back, people actually looked disappointed.
+So that's how I ended up with three cats instead of one.
+I went in for a single kitten, and I honestly don't know what happened.
+Anyway, that's the whole story, and I'm sticking to it.
+And that, my friend, is why I no longer cook fish indoors.
+
+# ---------- Session 4: everyday work and study ----------
+I've got a pile of things to finish before Friday.
+Let me just send this email, and then I'm all yours.
+Could you take a quick look at this when you get a chance?
+I think there's a small mistake on the second page.
+We'll probably need another week to get it right.
+My manager moved the meeting to three o'clock again.
+Sorry, I was on mute that whole time, wasn't I?
+Can everyone see my screen all right?
+Let's go through this one step at a time.
+I'll share my notes with you after lunch.
+Who's taking care of the budget this time around?
+It's not urgent, so don't worry about it today.
+That deadline is going to be really tight.
+I've been staring at this spreadsheet for the last two hours.
+The printer's jammed again, and nobody knows how to fix it.
+I keep forgetting my password for that website.
+We finished ahead of schedule for once, can you believe it?
+I'm working from home tomorrow, so just call me if you need anything.
+The new guy seems really nice, and he's very quick to learn.
+Can you remind me what we decided at the last meeting?
+I need to prepare for my presentation on Monday.
+My hands always get cold before I speak in front of people.
+I stayed up far too late studying for that exam.
+The last question was much harder than I expected.
+I think I did okay, but I'm not getting my hopes up.
+Our teacher gave us an extra week for the project.
+Would you mind explaining that part to me one more time?
+I finally understood it when she drew it out on the board.
+The library's the only place where I can actually concentrate.
+We've got a group assignment due at the end of the month.
+Somehow, I always end up doing most of the typing.
+I'm thinking of taking an evening course in photography.
+It's never too late to learn something completely new.
+My first job paid almost nothing, but I learned so much.
+I really do enjoy working with people who ask good questions.
+Let's take ten minutes and come back to this with fresh eyes.
+I'll need your signature on this form before you leave.
+Please let the front desk know that you've arrived.
+There's fresh coffee in the kitchen if anyone wants some.
+Thanks for covering for me yesterday, I owe you one.
+I don't think we've met, I sit just down the hall.
+It's been a long week, and I can't wait to switch off.
+I'm heading out now, so have a good weekend, everybody.
+See you all on Monday morning.
+
+# ---------- Session 5: explaining things to someone ----------
+Okay, so the first thing you want to do is switch it off.
+Hold that button down until the little light starts blinking.
+Now give it a few seconds, and it should come back on.
+If that doesn't work, try unplugging it from the wall.
+It's actually a lot simpler than it looks.
+Just follow the main road until you see the petrol pump.
+Take the next right, and it's the blue building at the end.
+You can't miss it, there's a huge tree right in front.
+First, heat the oil, and then throw in the mustard seeds.
+Wait until they start popping before you add the onions.
+Keep stirring, or it'll stick to the bottom of the pan.                     
+Add a pinch of turmeric, and let it cook for a minute.
+The trick is not to rush it.
+Think of it like a bank account, but for your energy.
+Every late night is basically a little withdrawal.
+The more you put in, the more you can take out later on.
+Let me put it another way, so it makes more sense.
+Basically, the whole thing comes down to just two ideas.
+What I mean is that you don't have to do it all at once.
+Here's the part that most people tend to get wrong.
+You see, the moon only looks like it's changing shape.
+It's really the sunlight falling on it from different sides.
+Thunder comes after lightning because sound travels more slowly than light.
+That's why you can count the seconds to tell how far away a storm is.
+Plants lean towards the window because they're reaching for the light.
+A good night's sleep does more for your memory than an extra hour of studying.
+If you're learning the guitar, start with just three simple chords.
+You'll be amazed at how many songs you can already play.
+Always check the tyre pressure before a long drive.
+Keep your receipts together in one place, and thank yourself later.
+When you're choosing a mango, smell it near the stem.
+If it smells sweet, you've found a good one.
+To fold a shirt quickly, start by laying it face down.
+Tuck the sleeves in, and then fold it from the bottom up.
+You don't need expensive shoes to start running.
+Just begin slowly, and build up a little every week.
+The easiest way to remember a name is to use it straight away.
+Say it back to them when you're being introduced.
+Does that make sense so far, or should I go over it again?
+Don't worry if it doesn't click the very first time.
+You'll get the hang of it after you've tried it a few times.
+See, I told you that you could do it.
+That's pretty much all there is to it.
+Now you try it, and I'll watch.
+
+# ---------- Session 6: questions and quick replies ----------
+What are you doing later this evening?
+Nothing special, why, what did you have in mind?
+Have you got a minute, or is this a bad time?
+Sure, go ahead, I'm just waiting for a call.
+Where did you park the car?
+It's just around the back, near the side gate.
+Who was that on the phone just now?
+It was only the delivery guy, asking for directions.
+When does your flight land on Thursday?
+Sometime around noon, if there aren't any delays.
+How much did you end up paying for that?
+Don't even ask, it was way more than I wanted to spend.
+Which way do you think we should go?
+Let's try the left, it looks a little less crowded.
+Why didn't you tell me about this earlier?
+I wanted to be sure before I said anything.
+Would you like me to get you anything from the shop?
+Maybe some bread, if it isn't too much trouble.
+Is it just me, or is it really cold in here?
+No, it's definitely freezing, someone left the door open.
+Do you want the good news or the bad news first?
+Give me the bad news, and let's get it over with.
+Can you hear that strange noise coming from the kitchen?
+Oh, that's only the fridge, it does that sometimes.
+How long have you two known each other?
+Since we were little, we grew up on the same street.
+Are you feeling any better than you were yesterday?
+Much better, thanks, I think I just needed some rest.
+Did you lock the front door before we left?
+I'm pretty sure I did, but now you've got me wondering.
+What's the name of that actor from that show we watched?
+It's on the tip of my tongue, give me a second.
+Could we possibly do this tomorrow instead?
+Of course, tomorrow actually works better for me too.
+Have you tried turning it off and on again?
+Yes, I have, and that was the very first thing I did.
+What would you do if you had a whole month off?
+I'd probably sleep for the first week, if I'm honest.
+Whose jacket is this on the back of the chair?
+I think it's Anil's, he was here this morning.
+Shall I put the kettle on?
+Yes, please, you read my mind.
+You're not seriously going out in this rain, are you?
+Well, I did promise, so I suppose I have to.
+
+# ---------- Session 7: food, travel and shopping ----------
+I could happily live on rice and dal for the rest of my life.
+There's a little place near my office that does amazing samosas.
+You have to go early, because they sell out by eleven.
+This soup could really use a bit more salt.
+I think I put too much chilli in it, sorry about that.
+Is there any of that chutney left from yesterday?
+Nothing beats a hot cup of chai when it's raining outside.
+My aunt makes the most incredible mango pickle.
+She refuses to share the recipe with anybody in the family.
+Let's split a dessert, I can't eat a whole one by myself.
+Could we have the menu again, please?
+I'll have whatever she's having, it looks really good.
+Excuse me, I think there's been a mistake with our order.
+I've been dreaming about going to Ladakh for years now.
+We're thinking of taking the night train and saving on a hotel.
+Have you packed your charger and your medicines?
+My suitcase is always heavier on the way back home.
+The window seat is lovely, right up until you need the bathroom.
+We got completely lost and found the best view of the whole trip.
+It's much cheaper if you book a few weeks ahead.
+The auto driver took one look at us and doubled the fare.
+You really do have to bargain a little at that market.
+Do you have this in a slightly bigger size?
+It's nice, but I was hoping for something a bit lighter.
+I went in for one thing and came out with six.
+They've got a sale on until the end of the week.
+I can't decide between the green one and the white one.
+Do you think these shoes go with this dress?
+I always end up buying the same kind of shirt.
+Can I return this if it doesn't fit my brother?
+Keep the change, and thanks for all your help.
+The fruit seller on our road always slips in an extra banana.
+We ate on the beach with our feet in the sand.
+The fish was so fresh that it hardly needed any spices.
+I had the best coffee of my life at a tiny roadside stall.
+The hotel looked nothing like it did in the pictures.
+Our guide knew a shortcut through the old part of the town.
+Everybody was so friendly that we didn't want to leave.
+It rained for three days, and we played cards the whole time.
+The sunrise from up there was absolutely worth the climb.
+I still have sand in that bag from our last holiday.
+Next time, let's just stay in one place and do nothing at all.
+Honestly, coming home is sometimes the best part of travelling.
+Nothing feels quite as good as sleeping in your own bed.
+
+# ---------- Session 8: numbers, dates, names and places ----------
+I'll meet you at the gate at a quarter past six.
+The whole thing should only take about forty minutes.
+My appointment got moved to the nineteenth of March.
+I was born in the winter of nineteen ninety-eight.
+We've lived on this street for almost eleven years.
+There are only three tickets left for Saturday night.
+He's turning sixty next month, and we're planning a surprise.
+The rent's gone up by two thousand rupees this year.
+It's about a hundred and fifty kilometres from here.
+Her flat is on the ninth floor, right next to the lift.
+I've read that book at least four or five times.
+School starts again on the second of June.
+The train was delayed by nearly two and a half hours.
+Could I get two coffees and one plain sandwich, please?
+My grandmother just celebrated her eighty-fifth birthday.
+We need around thirty chairs for the function.
+The shop opens at ten and shuts at half past eight.
+I paid seven hundred and fifty for the pair.
+It was the first time in fifteen years that it had snowed there.
+Add two spoons of sugar and half a cup of milk.
+Nisha and Karthik just had their first baby.
+Rohan's been teaching maths at the same school for ages.
+I asked Deepa, and she said to check with Imran.
+Lakshmi runs the tailoring shop next to the post office.
+Aditya plays cricket with Farhan every Sunday morning.
+Pooja is moving to Ahmedabad for her new job.
+We stopped in Nashik on our way down to Goa.
+My parents still live in a small town outside Madurai.
+I've never been to Shillong, but I'd really love to go.
+The food in Lucknow is reason enough to visit.
+Amritsar is beautiful early in the morning.
+They went from Kochi to Munnar by road.
+Udaipur looks like something out of a painting.
+My sister's studying in Bhopal for the next two years.
+It's colder in Shimla than I'd expected for October.
+Tuesday's no good for me, but Wednesday's wide open.
+We usually go home for a week in April.
+The festival falls on a Friday this year.
+I've got a dentist appointment first thing on Thursday.
+It's nearly the end of September already.
+The bus comes every twelve minutes on weekdays.
+He finished the race in third place out of two hundred.
+I still remember our old phone number, even after all these years.
+The party's on the seventeenth, so keep that evening free.
+
+# ---------- Session 9: feelings ----------
+I'm so happy for you, you have no idea.
+This is honestly the best news I've had all month.
+I can't stop smiling, and people keep asking me why.
+Oh, that's so lovely of you, you really didn't have to.
+You've made my whole day, thank you.
+I'm so sorry, that must have been awful for you.
+I wish there was something more I could do to help.
+Take all the time you need, there's no pressure at all.
+I'm here if you want to talk, or even if you don't.
+I've been feeling a bit low these past few days.
+Some mornings it's just hard to get going.
+I miss my old friends more than I expected to.
+It's strange how quiet the house feels without the kids.
+I got really nervous just before I walked in.
+My heart was beating so fast that I could hear it.
+I was absolutely terrified, but I'm glad I did it.
+Ugh, I'm so tired of having this same argument.
+That really hurt my feelings, if I'm being honest.
+I can't believe she'd say something like that behind my back.
+Look, I'm not angry, I'm just a little disappointed.
+Stop it, you're making me laugh too hard.
+I laughed so much that my stomach actually hurt.
+Oh my goodness, you scared the life out of me.
+Wait, what, are you being serious right now?
+You're joking, there's absolutely no way that happened.
+I was so embarrassed that I wanted to disappear.
+Why do I always say the wrong thing at the wrong moment?
+I feel so much lighter now that I've told you.
+It's such a relief to finally have that over with.
+I'm really proud of how far you've come.
+You worked so hard for this, and you deserve every bit of it.
+Don't be so hard on yourself, everyone makes mistakes.
+It's going to be okay, I promise you.
+Come here, you look like you could use a hug.
+I love how peaceful it gets just after it rains.
+There's nothing better than a lazy Sunday with nowhere to be.
+I'm a little jealous, I'll admit it.
+I just can't wait to see the look on her face.
+I'm so excited that I probably won't sleep tonight!
+Yes, we did it, we actually did it!
+Oh no, please tell me you're kidding.
+I honestly don't know whether to laugh or cry.
+It means a lot to me that you came.
+I'll never forget what you did for me.
+
+# ---------- Session 10: longer thoughts, said naturally ----------
+You know, the older I get, the more I think the small moments are the ones that really stay with you.
+I used to believe I had to have everything planned out, but life has a funny way of changing your plans.
+What I love about this neighbourhood is that people still stop and ask how your mother's doing.
+There's something really comforting about cooking the same dish your grandmother used to make.
+I think the hardest part of growing up is realising your parents were just figuring it out as well.
+If there's one thing I've learned, it's that you can't make everybody happy, so you might as well be kind.
+Whenever I'm stuck on a problem, I go for a walk, and the answer usually turns up on the way back.
+It took me years to understand that saying no to something doesn't make you a bad person.
+My best friend and I don't talk every day, but when we do, it's like no time has passed.
+We spent the whole evening on the roof, watching the kites and talking about nothing in particular.
+I remember the smell of wet earth from the first rain, and my mother calling us back inside.
+People say money can't buy happiness, but it can certainly pay for a very comfortable sofa.
+I wasn't sure about moving so far away from home, but it turned out to be the right thing for me.
+The funny thing about being busy all the time is that you forget what you were busy for.
+When you really listen to someone, you'll often find they've got a lot more to say than you expected.
+I've started putting my phone in another room at night, and I can't tell you how much it's helped.
+Every time I go back to my old school, the corridors seem so much smaller than I remembered.
+There's an old man on our street who waters everybody's plants, whether they've asked him to or not.
+I think we should spend less time worrying about tomorrow and a little more time enjoying this evening.
+She always had this way of making you feel like you were the most important person in the room.
+By the time we got to the top of the hill, the fog had lifted and you could see the whole valley.
+My father never said much, but he'd quietly fill up your scooter with petrol before you left.
+You don't really notice how much noise there is in a city until you spend a week away from it.
+I've been trying to read a little every night instead of scrolling until my eyes hurt.
+It's funny how you can forget what someone said, but you never forget how they made you feel.
+We don't have much of a garden, but there's a corner of it that gets beautiful light in the evenings.
+I'd like to think that if we met again after twenty years, we'd pick up exactly where we left off.
+Some of the best conversations I've ever had happened in a car, late at night, on the way back home.
+I keep a list of little things that made me happy, and it's longer than you'd imagine.
+At the end of the day, what most of us want is just someone to come home to and something to look forward to.
+When my nephew asks me why the sky is blue, I realise how little I actually remember from school.
+The neighbours' kids have started a tiny lemonade stall, and they charge me double because they know I'll pay.
+I don't always get it right, but I do try to leave a place a little better than I found it.
+We've been meaning to clean out that cupboard for three years, and I suspect we never will.
+If you'd told me five years ago that I'd enjoy waking up early, I'd have laughed in your face.
+There's a kind of quiet after a long day's work that I wouldn't trade for anything.
+I'm not saying it was easy, but looking back now, I wouldn't change a single thing about it.
+And that's about everything I wanted to say for today, so I'll stop talking now.
